@@ -9,6 +9,8 @@
 #import "ANVideoPlayerView.h"
 #import "ANVideoPlayerConfig.h"
 
+#define KControlsHideInterval 5.f
+
 @implementation ANVideoPlayerView
 {
     struct {
@@ -35,6 +37,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self stopControlsTimer];
 }
 
 - (void)awakeFromNib
@@ -80,6 +83,9 @@
     [self.scrubber addTarget:self action:@selector(scrubberDragBegin) forControlEvents:UIControlEventTouchDown];
     [self.scrubber addTarget:self action:@selector(scrubberDragEnd) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel];
     [self.scrubber addTarget:self action:@selector(scrubberValueChanged) forControlEvents:UIControlEventValueChanged];
+    
+    [self startControlsTimer];
+    self.isControlsHidden = NO;
 }
 
 - (void)addObserver
@@ -133,6 +139,29 @@
     });
 }
 
+#pragma mark -- ControlsTimer
+- (void)startControlsTimer
+{
+    [self stopControlsTimer];
+    self.controlsTimer = [NSTimer scheduledTimerWithTimeInterval:KControlsHideInterval target:self selector:@selector(controlsTimerHandle) userInfo:nil repeats:NO];
+}
+
+- (void)stopControlsTimer
+{
+    if (self.controlsTimer.isValid) {
+        [self.controlsTimer invalidate];
+        self.controlsTimer = nil;
+    }
+}
+
+- (void)controlsTimerHandle
+{
+    if (!self.isControlsHidden) {
+        self.controlView.hidden = YES;
+        self.isControlsHidden = YES;
+    }
+}
+
 #pragma mark -- updateView
 - (void)updateTimeLabel
 {
@@ -143,17 +172,20 @@
 - (void)playerViewTapHandle:(UITapGestureRecognizer *)playerViewTap
 {
     self.controlView.hidden = !self.isControlsHidden;
+    self.isControlsHidden ? [self startControlsTimer] : [self stopControlsTimer];
     self.isControlsHidden = !self.isControlsHidden;
 }
 
 - (IBAction)closeButtonClick:(id)sender {
     if (_delegateFlags.closeButtonTapped) {
+        [self stopControlsTimer];
         [self.delegate closeButtonTapped];
     }
 }
 
 - (IBAction)playButtonClick:(id)sender {
     self.playButton.selected = !self.playButton.selected;
+    self.playButton.selected ? [self stopControlsTimer] : [self startControlsTimer];
     if (_delegateFlags.playButtonTapped) {
         [self.delegate playButtonTapped];
     }
@@ -161,6 +193,7 @@
 
 - (IBAction)bigPlayButtonClick:(id)sender {
     self.bigPlayButton.selected = !self.bigPlayButton.selected;
+    self.bigPlayButton.selected ? [self stopControlsTimer] : [self startControlsTimer];
     if (_delegateFlags.bigPlayButtonTapped) {
         [self.delegate bigPlayButtonTapped];
     }
@@ -168,6 +201,7 @@
 
 - (IBAction)fullScreenButtonClick:(id)sender {
     self.fullScreenButton.selected = !self.fullScreenButton.selected;
+    [self startControlsTimer];
     if (_delegateFlags.fullScreenButtonTapped) {
         [self.delegate fullScreenButtonTapped];
     }
@@ -175,6 +209,7 @@
 
 - (void)scrubberDragBegin
 {
+    [self stopControlsTimer];
     if (_delegateFlags.scrubberBegin) {
         [self.delegate scrubberBegin];
     }
@@ -182,6 +217,7 @@
 
 - (void)scrubberDragEnd
 {
+    [self startControlsTimer];
     if (_delegateFlags.scrubberEnd) {
         [self.delegate scrubberEnd];
     }

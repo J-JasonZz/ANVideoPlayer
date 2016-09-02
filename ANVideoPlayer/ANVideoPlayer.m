@@ -73,9 +73,14 @@
 {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     
+    // AVPlayer状态
     [notificationCenter addObserver:self selector:@selector(playerItemReadyToPlay) name:KANVideoPlayerItemReadyToPlay object:nil];
     [notificationCenter addObserver:self selector:@selector(playerStateChanged) name:KANVideoPlayerStateChange object:nil];
     [notificationCenter addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
+    
+    // app状态
+    [notificationCenter addObserver:self selector:@selector(playerWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(playerDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)loadVideoWithStreamURL:(NSURL *)streamURL
@@ -215,9 +220,6 @@
     if ([self.player currentItemDuration] > 1) {
         NSDictionary *info = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:timeInSeconds] forKey:@"scrubberValue"];
         [[NSNotificationCenter defaultCenter] postNotificationName:kANVideoPlayerScrubberValueUpdatedNotification object:self userInfo:info];
-  
-        NSDictionary *durationInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithDouble:[self.player currentItemDuration]] forKey:@"duration"];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kANVideoPlayerDurationDidLoadNotification object:self userInfo:durationInfo];
     }
 }
 
@@ -284,6 +286,9 @@
 #pragma mark -- Observer
 - (void)playerItemReadyToPlay
 {
+    NSDictionary *durationInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithDouble:[self.player currentItemDuration]] forKey:@"duration"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kANVideoPlayerDurationDidLoadNotification object:self userInfo:durationInfo];
+    
     RUN_ON_UI_THREAD(^{
         switch (self.state) {
             case ANVideoPlayerStateContentPaused:
@@ -339,6 +344,17 @@
     }
 }
 
+- (void)playerWillResignActive:(NSNotification *)notification
+{
+    [self pauseContent:NO completionHandler:NULL];
+}
+
+- (void)playerDidBecomeActive:(NSNotification *)notification
+{
+    [self playContent];
+}
+
+#pragma mark -- DeivceOrientation
 - (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation {
     
     CGFloat degrees = [self degreesForOrientation:deviceOrientation];

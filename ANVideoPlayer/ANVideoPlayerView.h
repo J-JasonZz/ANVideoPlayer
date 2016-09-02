@@ -61,4 +61,7 @@
 // 控制视图显示
 @property (nonatomic, assign) BOOL isControlsHidden;
 
+// 控制视图隐藏定时器
+@property (nonatomic, strong) NSTimer *controlsTimer;
+
 @end
