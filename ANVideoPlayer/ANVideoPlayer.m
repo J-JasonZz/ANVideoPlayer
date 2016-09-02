@@ -258,7 +258,7 @@
             }
         }
         if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
-            if (self.playerItem.playbackLikelyToKeepUp) {
+            if (self.playerItem.playbackLikelyToKeepUp && self.state == ANVideoPlayerStateContentLoading) {
                 [self playContent];
             }
         }
