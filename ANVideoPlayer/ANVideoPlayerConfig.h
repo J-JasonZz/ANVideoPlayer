@@ -17,7 +17,7 @@
 typedef void (^VoidBlock)();
 
 #define KANVideoPlayerItemReadyToPlay @"ANVideoPlayerItemReadyToPlay"
-#define KANVideoPlayerStateChange @"ANVideoPlayerStateChange"
+#define KANVideoPlayerItemStatusFailed @"ANVideoPlayerItemStatusFailed"
 
 #define kANVideoPlayerDurationDidLoadNotification @"ANVideoPlayerDurationDidLoadNotification"
 #define kANVideoPlayerScrubberValueUpdatedNotification @"ANVideoPlayerScrubberValueUpdatedNotification"

@@ -75,7 +75,6 @@
     
     // AVPlayer状态
     [notificationCenter addObserver:self selector:@selector(playerItemReadyToPlay) name:KANVideoPlayerItemReadyToPlay object:nil];
-    [notificationCenter addObserver:self selector:@selector(playerStateChanged) name:KANVideoPlayerStateChange object:nil];
     [notificationCenter addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
     
     // app状态
@@ -244,7 +243,10 @@
                         [notificationCenter postNotificationName:KANVideoPlayerItemReadyToPlay object:nil];
                     }
                     break;
-                    
+                case AVPlayerItemStatusFailed:
+                    [notificationCenter postNotificationName:KANVideoPlayerItemStatusFailed object:nil];
+                    self.state = ANVideoPlayerStateError;
+                    break;
                 default:
                     break;
             }
@@ -275,6 +277,8 @@
                     }
                     break;
                 case AVPlayerStatusFailed:
+                    [notificationCenter postNotificationName:KANVideoPlayerItemStatusFailed object:nil];
+                    self.state = ANVideoPlayerStateError;
                     break;
                 default:
                     break;
@@ -311,11 +315,6 @@
     RUN_ON_UI_THREAD(^{
         [self pauseContent:NO completionHandler:NULL];
     });
-}
-
-- (void)playerStateChanged
-{
-    
 }
 
 - (void)orientationChanged:(NSNotification *)notification
@@ -371,22 +370,17 @@
             viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.portraitFrame), CGRectGetHeight(self.portraitFrame));
         }
         
-        weakSelf.playerView.superview.transform = CGAffineTransformMakeRotation(degreesToRadians(degrees));
-        weakSelf.playerView.superview.bounds = viewBoutnds;
-        [weakSelf.playerView.superview setFrameOriginX:0.0f];
-        [weakSelf.playerView.superview setFrameOriginY:0.0f];
-        
-        CGRect wvFrame = weakSelf.playerView.superview.superview.frame;
-        if (wvFrame.origin.y > 0) {
-            wvFrame.size.height = CGRectGetHeight(bounds) ;
-            wvFrame.origin.y = 0;
-            weakSelf.playerView.superview.superview.frame = wvFrame;
-        }
-        
+        weakSelf.playerView.transform = CGAffineTransformMakeRotation(degreesToRadians(degrees));
         weakSelf.playerView.bounds = viewBoutnds;
         [weakSelf.playerView setFrameOriginX:0.0f];
         [weakSelf.playerView setFrameOriginY:0.0f];
         
+        CGRect wvFrame = weakSelf.playerView.superview.frame;
+        if (wvFrame.origin.y > 0) {
+            wvFrame.size.height = CGRectGetHeight(bounds) ;
+            wvFrame.origin.y = 0;
+            weakSelf.playerView.frame = wvFrame;
+        }        
     } completion:^(BOOL finished) {
         
     }];
@@ -489,6 +483,7 @@
             self.playerView.playButton.selected = NO;
             self.playerView.bigPlayButton.selected = NO;
             self.playerView.playButton.enabled = YES;
+            self.playerView.scrubber.enabled = YES;
             self.playerView.loadedTimeRangesProgress.hidden = NO;
             [self.player play];
             break;
@@ -503,6 +498,8 @@
         case ANVideoPlayerStateDismissed:
             break;
         case ANVideoPlayerStateError:
+            self.playerView.playButton.enabled = NO;
+            self.playerView.scrubber.enabled = NO;
             [self.player pause];
             break;
         default:

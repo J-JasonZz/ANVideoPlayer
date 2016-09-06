@@ -16,11 +16,6 @@
 
 @implementation ANVideoPlayerViewController
 
-- (void)dealloc
-{
-    NSLog(@"%@", self.class);
-}
-
 - (instancetype)init
 {
     self = [super init];
