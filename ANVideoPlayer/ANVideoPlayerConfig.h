@@ -15,7 +15,7 @@
 
 typedef void (^VoidBlock)();
 
-#define KSreenBounds [[UIScreen mainScreen] bounds]
+#define KScreenBounds [[UIScreen mainScreen] bounds]
 //十六进制色值
 #define kUIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

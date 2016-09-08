@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
 }
 
 - (IBAction)presentAction:(id)sender {
@@ -43,6 +41,7 @@
         self.player.playerView.alpha = 0.0;
     } completion:^(BOOL finished) {
         self.player.playerView.hidden = YES;
+        [self.player.playerView removeFromSuperview];
         self.player = nil;
     }];
 }

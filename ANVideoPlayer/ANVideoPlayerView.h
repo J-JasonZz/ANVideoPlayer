@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
 
 - (void)closeButtonTapped;
 
+- (void)windowCloseButtonTapped;
+
 - (void)fullScreenButtonTapped;
 
 - (void)bigPlayButtonTapped;
@@ -54,6 +56,7 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
 @property (weak, nonatomic) IBOutlet UIView *topControlOverlay;
 // 关闭播放按钮
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIButton *windowButton;
 // 底部控制层
 @property (weak, nonatomic) IBOutlet UIView *bottomControlOverlay;
 // 播放按钮
@@ -71,6 +74,7 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
 @property (weak, nonatomic) IBOutlet UIButton *bigPlayButton;
 // 菊花
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+// 窗口播放模式关闭
 @property (weak, nonatomic) IBOutlet UIButton *windowCloseButton;
 
 // 控制视图显示

@@ -56,11 +56,15 @@
     [self.playerView setDelegate:self];
     
     self.state = ANVideoPlayerStateUnknown;
+    self.playerView.state = ANVideoPlayerViewStatePortrait;
 
-    self.portraitFrame = CGRectMake(0, 0, MIN(KSreenBounds.size.width, KSreenBounds.size.height), MAX(KSreenBounds.size.width, KSreenBounds.size.height));
-    self.landscapeFrame = CGRectMake(0, 0, MAX(KSreenBounds.size.width, KSreenBounds.size.height), MIN(KSreenBounds.size.width, KSreenBounds.size.height));
+    self.portraitFrame = CGRectMake(0, 0, MIN(KScreenBounds.size.width, KScreenBounds.size.height), MAX(KScreenBounds.size.width, KScreenBounds.size.height));
+    self.landscapeFrame = CGRectMake(0, 0, MAX(KScreenBounds.size.width, KScreenBounds.size.height), MIN(KScreenBounds.size.width, KScreenBounds.size.height));
     
     self.supportedOrientations = UIInterfaceOrientationMaskAllButUpsideDown;
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
 - (void)setDelegate:(id<ANVideoPlayerDelegate>)delegate
@@ -319,21 +323,27 @@
 
 - (void)orientationChanged:(NSNotification *)notification
 {
+    if (self.playerView.state == ANVideoPlayerViewStateWindow) {
+        return;
+    }
     UIDevice * device = notification.object;
     
     UIInterfaceOrientation rotateToOrientation;
     switch(device.orientation) {
         case UIDeviceOrientationPortrait:
             rotateToOrientation = UIInterfaceOrientationPortrait;
+            self.playerView.state = ANVideoPlayerViewStatePortrait;
             break;
         case UIDeviceOrientationPortraitUpsideDown:
             rotateToOrientation = UIInterfaceOrientationPortraitUpsideDown;
             break;
         case UIDeviceOrientationLandscapeLeft:
             rotateToOrientation = UIInterfaceOrientationLandscapeRight;
+            self.playerView.state = ANVideoPlayerViewStateLandscape;
             break;
         case UIDeviceOrientationLandscapeRight:
             rotateToOrientation = UIInterfaceOrientationLandscapeLeft;
+            self.playerView.state = ANVideoPlayerViewStateLandscape;
             break;
         default:
             break;
@@ -377,7 +387,7 @@
         
         CGRect wvFrame = weakSelf.playerView.superview.frame;
         if (wvFrame.origin.y > 0) {
-            wvFrame.size.height = CGRectGetHeight(KSreenBounds) ;
+            wvFrame.size.height = CGRectGetHeight(KScreenBounds) ;
             wvFrame.origin.y = 0;
             weakSelf.playerView.frame = wvFrame;
         }        
@@ -542,6 +552,13 @@
     }
     if (_delegateFlags.closeButtonClick) {
         [self.delegate videoPlayer:self closeButtonClick:self.playerView.closeButton];
+    }
+}
+
+- (void)windowCloseButtonTapped
+{
+    if (_delegateFlags.closeButtonClick) {
+        [self.delegate videoPlayer:self closeButtonClick:self.playerView.windowCloseButton];
     }
 }
 

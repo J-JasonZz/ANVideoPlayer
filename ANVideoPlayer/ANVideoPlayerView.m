@@ -24,6 +24,7 @@
 {
     struct {
         unsigned int closeButtonTapped : 1;
+        unsigned int windowCloseButtonTapped : 1;
         unsigned int fullScreenButtonTapped : 1;
         unsigned int bigPlayButtonTapped : 1;
         unsigned int playButtonTapped : 1;
@@ -96,12 +97,8 @@
     [self.scrubber addTarget:self action:@selector(scrubberDragBegin) forControlEvents:UIControlEventTouchDown];
     [self.scrubber addTarget:self action:@selector(scrubberDragEnd) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel];
     [self.scrubber addTarget:self action:@selector(scrubberValueChanged) forControlEvents:UIControlEventValueChanged];
-    
-    [self startControlsTimer];
-    
+        
     self.isControlsHidden = NO;
-    
-    self.state = ANVideoPlayerViewStatePortrait;
 }
 
 - (void)addObserver
@@ -116,6 +113,7 @@
 {
     _delegate = delegate;
     _delegateFlags.closeButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(closeButtonTapped)];
+    _delegateFlags.windowCloseButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(windowCloseButtonTapped)];
     _delegateFlags.fullScreenButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(fullScreenButtonTapped)];
     _delegateFlags.bigPlayButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(bigPlayButtonTapped)];
     _delegateFlags.playButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(playButtonTapped)];
@@ -130,12 +128,20 @@
         case ANVideoPlayerViewStatePortrait:
             self.windowCloseButton.hidden = YES;
             self.controlView.hidden = NO;
+            self.windowButton.hidden = NO;
+            [[UIApplication sharedApplication] setStatusBarHidden:NO];
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+            [self startControlsTimer];
             break;
         case ANVideoPlayerViewStateLandscape:
+            self.windowButton.hidden = YES;
+            [[UIApplication sharedApplication] setStatusBarHidden:YES];
             break;
         case ANVideoPlayerViewStateWindow:
             self.windowCloseButton.hidden = NO;
             self.controlView.hidden = YES;
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+            [self stopControlsTimer];
             break;
         default:
             break;
@@ -208,7 +214,7 @@
 {
     if (self.state == ANVideoPlayerViewStateWindow) {
         [UIView animateWithDuration:0.3 animations:^{
-            self.frame = KSreenBounds;
+            self.frame = KScreenBounds;
         }completion:^(BOOL finished) {
             self.state = ANVideoPlayerViewStatePortrait;
         }];
@@ -238,6 +244,22 @@
     if (_delegateFlags.closeButtonTapped) {
         [self stopControlsTimer];
         [self.delegate closeButtonTapped];
+    }
+}
+
+- (IBAction)windowButtonClick:(id)sender {
+    self.isSwiping = YES;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.frame = CGRectMake(KScreenBounds.size.width - 15.f - KWindowDisplayWidth, KScreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
+    }completion:^(BOOL finished) {
+        self.isSwiping = NO;
+        self.state = ANVideoPlayerViewStateWindow;
+    }];
+}
+- (IBAction)windowCloseButtonClick:(id)sender {
+    if (_delegateFlags.windowCloseButtonTapped) {
+        [self stopControlsTimer];
+        [self.delegate windowCloseButtonTapped];
     }
 }
 
@@ -300,32 +322,32 @@
     if (distance <= 0) return;
     if (!self.isSwiping) return;
     
-    CGFloat rate = distance / (KSreenBounds.size.width*2);
+    CGFloat rate = distance / (KScreenBounds.size.width*2);
     
     CGFloat widthPaddign = 15.f;
     CGFloat heightPadding = 45.f;
     
-    [self setFrameOriginX:(KSreenBounds.size.width - widthPaddign - KWindowDisplayWidth) * rate];
-    [self setFrameOriginY:(KSreenBounds.size.height - heightPadding - KWindowDisplayHeight) * rate];
+    [self setFrameOriginX:(KScreenBounds.size.width - widthPaddign - KWindowDisplayWidth) * rate];
+    [self setFrameOriginY:(KScreenBounds.size.height - heightPadding - KWindowDisplayHeight) * rate];
     
-    [self setFrameWidth:KSreenBounds.size.width - self.frame.origin.x - (widthPaddign * rate)];
-    [self setFrameHeight:KSreenBounds.size.height - self.frame.origin.y - (heightPadding * rate)];
+    [self setFrameWidth:KScreenBounds.size.width - self.frame.origin.x - (widthPaddign * rate)];
+    [self setFrameHeight:KScreenBounds.size.height - self.frame.origin.y - (heightPadding * rate)];
 }
 
 - (void)endPanPlayerViewWhenPortrait
 {
     if (!self.isSwiping) return;
 
-    if (self.frame.origin.x >= 60.f) {
+    if (self.frame.origin.x >= 50.f) {
         [UIView animateWithDuration:0.3 animations:^{
-            self.frame = CGRectMake(KSreenBounds.size.width - 15.f - KWindowDisplayWidth, KSreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
+            self.frame = CGRectMake(KScreenBounds.size.width - 15.f - KWindowDisplayWidth, KScreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
         }completion:^(BOOL finished) {
             self.isSwiping = NO;
             self.state = ANVideoPlayerViewStateWindow;
         }];
     } else {
         [UIView animateWithDuration:0.3 animations:^{
-            self.frame = KSreenBounds;
+            self.frame = KScreenBounds;
         }completion:^(BOOL finished) {
             self.isSwiping = NO;
         }];
@@ -334,20 +356,33 @@
 
 - (void)panPlayerViewWhenWindowWithPanGestureTranslation:(CGPoint)translation
 {
-    self.center = CGPointMake(self.center.x + translation.x,
-                                         self.center.y + translation.y);
+    self.center = CGPointMake(self.center.x + translation.x, self.center.y + translation.y);
     [self.panGesture setTranslation:CGPointZero inView:[UIApplication sharedApplication].delegate.window];
 }
 
 - (void)endPanPlayerViewWhenWindow
 {
-    if (self.center.x <= KSreenBounds.size.width / 2.f) {
+    if (self.center.x <= KScreenBounds.size.width / 2.f) {
         [UIView animateWithDuration:0.3f animations:^{
-            self.center = CGPointMake(15.f + KWindowDisplayWidth / 2.f, self.center.y);
+            CGPoint center = self.center;
+            center.x = 15.f + KWindowDisplayWidth / 2.f;
+            if (self.center.y < 15.f + KWindowDisplayHeight / 2.f) {
+                center.y = 15.f + KWindowDisplayHeight / 2.f;
+            } else if (self.center.y > KScreenBounds.size.height - 15.f - KWindowDisplayHeight / 2.f) {
+                center.y = KScreenBounds.size.height - 15.f - KWindowDisplayHeight / 2.f;
+            }
+            self.center = center;
         }];
     } else {
         [UIView animateWithDuration:0.3f animations:^{
-            self.center = CGPointMake(KSreenBounds.size.width - 15.f - KWindowDisplayWidth / 2.f ,self.center.y);
+            CGPoint center = self.center;
+            center.x = KScreenBounds.size.width - 15.f - KWindowDisplayWidth / 2.f;
+            if (self.center.y < 15.f + KWindowDisplayHeight / 2.f) {
+                center.y = 15.f + KWindowDisplayHeight / 2.f;
+            } else if (self.center.y > KScreenBounds.size.height - 15.f - KWindowDisplayHeight / 2.f) {
+                center.y = KScreenBounds.size.height - 15.f - KWindowDisplayHeight / 2.f;
+            }
+            self.center = center;
         }];
     }
 }

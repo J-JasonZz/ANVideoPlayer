@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81152531D81056300819C5F /* ANVideoPlayer_windowClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */; };
+		A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */; };
+		A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */; };
+		A81152581D810EBF00819C5F /* ANVideoPlayer_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */; };
 		A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E311D77CE130003E66C /* ANVideoPlayerView.m */; };
 		A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */; };
 		A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */; };
@@ -57,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@3x.png"; sourceTree = "<group>"; };
+		A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@2x.png"; sourceTree = "<group>"; };
+		A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@2x.png"; sourceTree = "<group>"; };
+		A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@3x.png"; sourceTree = "<group>"; };
 		A8224E301D77CE130003E66C /* ANVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerView.h; sourceTree = "<group>"; };
 		A8224E311D77CE130003E66C /* ANVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerView.m; sourceTree = "<group>"; };
 		A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ANFoundation.h"; sourceTree = "<group>"; };
@@ -230,6 +238,10 @@
 				A8224E7E1D7819570003E66C /* ANVideoPlayer_play@2x.png */,
 				A8224E7F1D7819570003E66C /* ANVideoPlayer_pause@3x.png */,
 				A8224E801D7819570003E66C /* ANVideoPlayer_pause@2x.png */,
+				A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */,
+				A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */,
+				A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */,
+				A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -340,22 +352,26 @@
 				A8224E831D7819570003E66C /* ANVideoPlayer_pause@3x.png in Resources */,
 				A8224E7B1D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png in Resources */,
 				A8224E591D780BE40003E66C /* ANVideoPlayer_play_big.png in Resources */,
+				A81152581D810EBF00819C5F /* ANVideoPlayer_window@3x.png in Resources */,
 				A8224E811D7819570003E66C /* ANVideoPlayer_play@3x.png in Resources */,
 				A8224E511D780BE40003E66C /* ANVideoPlayer_cross.png in Resources */,
 				A8224E551D780BE40003E66C /* ANVideoPlayer_pause_big.png in Resources */,
 				A8224E7A1D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png in Resources */,
 				A8224E5A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png in Resources */,
 				A8241D361D76F38A00EEE384 /* LaunchScreen.storyboard in Resources */,
+				A81152531D81056300819C5F /* ANVideoPlayer_windowClose@3x.png in Resources */,
 				A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */,
 				A8241D331D76F38A00EEE384 /* Assets.xcassets in Resources */,
 				A8224E841D7819570003E66C /* ANVideoPlayer_pause@2x.png in Resources */,
 				A8224E7C1D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png in Resources */,
 				A8224E6C1D7816900003E66C /* ANScrubber_thumb@3x.png in Resources */,
+				A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */,
 				A8241D311D76F38A00EEE384 /* Main.storyboard in Resources */,
 				A8224E6B1D7816900003E66C /* ANScrubber_thumb@2x.png in Resources */,
 				A8224E821D7819570003E66C /* ANVideoPlayer_play@2x.png in Resources */,
 				A8224E791D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png in Resources */,
 				A8224E561D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png in Resources */,
+				A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */,
 				A8224E521D780BE40003E66C /* ANVideoPlayer_cross@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
