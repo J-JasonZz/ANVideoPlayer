@@ -129,18 +129,16 @@
             self.windowCloseButton.hidden = YES;
             self.controlView.hidden = NO;
             self.windowButton.hidden = NO;
-            [[UIApplication sharedApplication] setStatusBarHidden:NO];
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+            [[UIApplication sharedApplication] setStatusBarHidden:YES];
             [self startControlsTimer];
             break;
         case ANVideoPlayerViewStateLandscape:
             self.windowButton.hidden = YES;
-            [[UIApplication sharedApplication] setStatusBarHidden:YES];
             break;
         case ANVideoPlayerViewStateWindow:
             self.windowCloseButton.hidden = NO;
             self.controlView.hidden = YES;
-            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+            [[UIApplication sharedApplication] setStatusBarHidden:NO];
             [self stopControlsTimer];
             break;
         default:
