@@ -11,6 +11,7 @@
 		A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */; };
 		A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */; };
 		A81152581D810EBF00819C5F /* ANVideoPlayer_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */; };
+		A81152991D8145DF00819C5F /* ANVideoPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */; };
 		A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E311D77CE130003E66C /* ANVideoPlayerView.m */; };
 		A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */; };
 		A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */; };
@@ -65,6 +66,8 @@
 		A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@2x.png"; sourceTree = "<group>"; };
 		A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@2x.png"; sourceTree = "<group>"; };
 		A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@3x.png"; sourceTree = "<group>"; };
+		A81152971D8145DF00819C5F /* ANVideoPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerUtil.h; sourceTree = "<group>"; };
+		A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerUtil.m; sourceTree = "<group>"; };
 		A8224E301D77CE130003E66C /* ANVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerView.h; sourceTree = "<group>"; };
 		A8224E311D77CE130003E66C /* ANVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerView.m; sourceTree = "<group>"; };
 		A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ANFoundation.h"; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 		A8241D591D76F39000EEE384 /* ANVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				A81152971D8145DF00819C5F /* ANVideoPlayerUtil.h */,
+				A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */,
 				A8241D5E1D76F49200EEE384 /* ANVideoPlayer.h */,
 				A8241D5F1D76F49200EEE384 /* ANVideoPlayer.m */,
 				A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */,
@@ -404,6 +409,7 @@
 				A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */,
 				A8241D601D76F49200EEE384 /* ANVideoPlayer.m in Sources */,
 				A8241D2B1D76F38A00EEE384 /* AppDelegate.m in Sources */,
+				A81152991D8145DF00819C5F /* ANVideoPlayerUtil.m in Sources */,
 				A8241D281D76F38A00EEE384 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

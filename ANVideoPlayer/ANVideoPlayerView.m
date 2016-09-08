@@ -46,6 +46,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"%@", self.class);
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self stopControlsTimer];
 }

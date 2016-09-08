@@ -18,5 +18,10 @@
     [(AVPlayerLayer *)[self layer] setPlayer:player];
 }
 
+- (void)dealloc
+{
+    NSLog(@"%@", self.class);
+}
+
 
 @end

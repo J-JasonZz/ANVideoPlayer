@@ -37,6 +37,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"%@", self.class);
     self.timeObserver = nil;
     self.player = nil;
     self.playerItem = nil;
