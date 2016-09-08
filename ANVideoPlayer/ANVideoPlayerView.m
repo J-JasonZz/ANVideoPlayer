@@ -11,6 +11,15 @@
 
 #define KControlsHideInterval 5.f
 
+#define KWindowDisplayWidth 170.f
+#define KWindowDisplayHeight 95.f
+
+@interface ANVideoPlayerView ()
+
+@property (nonatomic, assign) BOOL isSwiping;
+
+@end
+
 @implementation ANVideoPlayerView
 {
     struct {
@@ -76,8 +85,12 @@
     [self.bottomControlOverlay sendSubviewToBack:bottomOverlay];
     
     // 视图点击手势
-    UITapGestureRecognizer *playerViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playerViewTapHandle:)];
-    [self addGestureRecognizer:playerViewTap];
+    self.playerViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playerViewTapHandle:)];
+    [self addGestureRecognizer:self.playerViewTap];
+    
+    // 视图右拖动手势
+    self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipePanGestureHandler:)];
+    [self addGestureRecognizer:self.panGesture];
     
     // 播放进度条拖动
     [self.scrubber addTarget:self action:@selector(scrubberDragBegin) forControlEvents:UIControlEventTouchDown];
@@ -85,7 +98,10 @@
     [self.scrubber addTarget:self action:@selector(scrubberValueChanged) forControlEvents:UIControlEventValueChanged];
     
     [self startControlsTimer];
+    
     self.isControlsHidden = NO;
+    
+    self.state = ANVideoPlayerViewStatePortrait;
 }
 
 - (void)addObserver
@@ -105,6 +121,25 @@
     _delegateFlags.playButtonTapped = self.delegate && [self.delegate respondsToSelector:@selector(playButtonTapped)];
     _delegateFlags.scrubberBegin = self.delegate && [self.delegate respondsToSelector:@selector(scrubberBegin)];
     _delegateFlags.scrubberEnd = self.delegate && [self.delegate respondsToSelector:@selector(scrubberEnd)];
+}
+
+- (void)setState:(ANVideoPlayerViewState)state
+{
+    _state = state;
+    switch (self.state) {
+        case ANVideoPlayerViewStatePortrait:
+            self.windowCloseButton.hidden = YES;
+            self.controlView.hidden = NO;
+            break;
+        case ANVideoPlayerViewStateLandscape:
+            break;
+        case ANVideoPlayerViewStateWindow:
+            self.windowCloseButton.hidden = NO;
+            self.controlView.hidden = YES;
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark -- Observer
@@ -171,9 +206,32 @@
 #pragma mark -- Events
 - (void)playerViewTapHandle:(UITapGestureRecognizer *)playerViewTap
 {
-    self.controlView.hidden = !self.isControlsHidden;
-    self.isControlsHidden ? [self startControlsTimer] : [self stopControlsTimer];
-    self.isControlsHidden = !self.isControlsHidden;
+    if (self.state == ANVideoPlayerViewStateWindow) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.frame = KSreenBounds;
+        }completion:^(BOOL finished) {
+            self.state = ANVideoPlayerViewStatePortrait;
+        }];
+    } else {
+        self.controlView.hidden = !self.isControlsHidden;
+        self.isControlsHidden ? [self startControlsTimer] : [self stopControlsTimer];
+        self.isControlsHidden = !self.isControlsHidden;
+    }
+}
+
+- (void)swipePanGestureHandler:(UIPanGestureRecognizer *)panGesture
+{
+    CGPoint translation = [panGesture translationInView:self];
+
+    if (panGesture.state == UIGestureRecognizerStateBegan) {
+        [self startPanPlayerView];
+    }else if (panGesture.state == UIGestureRecognizerStateCancelled || panGesture.state == UIGestureRecognizerStateEnded){
+        if (self.state == ANVideoPlayerViewStatePortrait) [self endPanPlayerViewWhenPortrait];
+        if (self.state == ANVideoPlayerViewStateWindow) [self endPanPlayerViewWhenWindow];
+    }else if (panGesture.state == UIGestureRecognizerStateChanged){
+        if (self.state == ANVideoPlayerViewStatePortrait) [self panPlayerViewWhenPortraitWithPanGestureDistance:translation.x];
+        if (self.state == ANVideoPlayerViewStateWindow) [self panPlayerViewWhenWindowWithPanGestureTranslation:translation];
+    }
 }
 
 - (IBAction)closeButtonClick:(id)sender {
@@ -227,5 +285,72 @@
 {
     [self updateTimeLabel];
 }
+
+#pragma mark -- PanPlayerViewHandler
+- (void)startPanPlayerView
+{
+    if (self.isSwiping) {
+        return;
+    }
+    self.isSwiping = YES;
+}
+
+- (void)panPlayerViewWhenPortraitWithPanGestureDistance:(CGFloat)distance
+{
+    if (distance <= 0) return;
+    if (!self.isSwiping) return;
+    
+    CGFloat rate = distance / (KSreenBounds.size.width*2);
+    
+    CGFloat widthPaddign = 15.f;
+    CGFloat heightPadding = 45.f;
+    
+    [self setFrameOriginX:(KSreenBounds.size.width - widthPaddign - KWindowDisplayWidth) * rate];
+    [self setFrameOriginY:(KSreenBounds.size.height - heightPadding - KWindowDisplayHeight) * rate];
+    
+    [self setFrameWidth:KSreenBounds.size.width - self.frame.origin.x - (widthPaddign * rate)];
+    [self setFrameHeight:KSreenBounds.size.height - self.frame.origin.y - (heightPadding * rate)];
+}
+
+- (void)endPanPlayerViewWhenPortrait
+{
+    if (!self.isSwiping) return;
+
+    if (self.frame.origin.x >= 60.f) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.frame = CGRectMake(KSreenBounds.size.width - 15.f - KWindowDisplayWidth, KSreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
+        }completion:^(BOOL finished) {
+            self.isSwiping = NO;
+            self.state = ANVideoPlayerViewStateWindow;
+        }];
+    } else {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.frame = KSreenBounds;
+        }completion:^(BOOL finished) {
+            self.isSwiping = NO;
+        }];
+    }
+}
+
+- (void)panPlayerViewWhenWindowWithPanGestureTranslation:(CGPoint)translation
+{
+    self.center = CGPointMake(self.center.x + translation.x,
+                                         self.center.y + translation.y);
+    [self.panGesture setTranslation:CGPointZero inView:[UIApplication sharedApplication].delegate.window];
+}
+
+- (void)endPanPlayerViewWhenWindow
+{
+    if (self.center.x <= KSreenBounds.size.width / 2.f) {
+        [UIView animateWithDuration:0.3f animations:^{
+            self.center = CGPointMake(15.f + KWindowDisplayWidth / 2.f, self.center.y);
+        }];
+    } else {
+        [UIView animateWithDuration:0.3f animations:^{
+            self.center = CGPointMake(KSreenBounds.size.width - 15.f - KWindowDisplayWidth / 2.f ,self.center.y);
+        }];
+    }
+}
+
 
 @end

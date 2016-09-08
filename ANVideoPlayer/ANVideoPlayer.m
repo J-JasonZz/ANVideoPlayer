@@ -56,9 +56,9 @@
     [self.playerView setDelegate:self];
     
     self.state = ANVideoPlayerStateUnknown;
-    CGRect bounds = [[UIScreen mainScreen] bounds];
-    self.portraitFrame = CGRectMake(0, 0, MIN(bounds.size.width, bounds.size.height), MAX(bounds.size.width, bounds.size.height));
-    self.landscapeFrame = CGRectMake(0, 0, MAX(bounds.size.width, bounds.size.height), MIN(bounds.size.width, bounds.size.height));
+
+    self.portraitFrame = CGRectMake(0, 0, MIN(KSreenBounds.size.width, KSreenBounds.size.height), MAX(KSreenBounds.size.width, KSreenBounds.size.height));
+    self.landscapeFrame = CGRectMake(0, 0, MAX(KSreenBounds.size.width, KSreenBounds.size.height), MIN(KSreenBounds.size.width, KSreenBounds.size.height));
     
     self.supportedOrientations = UIInterfaceOrientationMaskAllButUpsideDown;
 }
@@ -362,7 +362,7 @@
     self.visibleInterfaceOrientation = deviceOrientation;
     
     [UIView animateWithDuration:0.3f animations:^{
-        CGRect bounds = [[UIScreen mainScreen] bounds];
+
         CGRect viewBoutnds;
         if (UIInterfaceOrientationIsLandscape(deviceOrientation)) {
             viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.landscapeFrame), CGRectGetHeight(self.landscapeFrame));
@@ -377,7 +377,7 @@
         
         CGRect wvFrame = weakSelf.playerView.superview.frame;
         if (wvFrame.origin.y > 0) {
-            wvFrame.size.height = CGRectGetHeight(bounds) ;
+            wvFrame.size.height = CGRectGetHeight(KSreenBounds) ;
             wvFrame.origin.y = 0;
             weakSelf.playerView.frame = wvFrame;
         }        

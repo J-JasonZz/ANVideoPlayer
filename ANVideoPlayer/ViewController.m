@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "ANVideoPlayerViewController.h"
+#import "ANVideoPlayer.h"
 
-@interface ViewController ()
+@interface ViewController ()<ANVideoPlayerDelegate>
+
+@property (nonatomic, strong) ANVideoPlayer *player;
 
 @end
 
@@ -17,14 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+
 }
 
 - (IBAction)presentAction:(id)sender {
-    ANVideoPlayerViewController *controller = [[ANVideoPlayerViewController alloc] init];
-    [self presentViewController:controller animated:YES completion:NULL];
-    
-    [controller playVideoWithStreamURL:[NSURL URLWithString:@"http://baobab.wdjcdn.com/14559682994064.mp4"]];
+    self.player = [[ANVideoPlayer alloc] init];
+    self.player.playerView.frame = [UIScreen mainScreen].bounds;
+    self.player.delegate = self;
+    self.player.playerView.alpha = 0.0;
+    [[UIApplication sharedApplication].delegate.window addSubview:self.player.playerView];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.player.playerView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        [self.player loadVideoWithStreamURL:[NSURL URLWithString:@"http://baobab.wdjcdn.com/14559682994064.mp4"]];
+    }];
+}
+
+#pragma mark -- ANVideoPlayerDelegate
+- (void)videoPlayer:(ANVideoPlayer *)videoPlayer closeButtonClick:(UIButton *)closeButton
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.player.playerView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        self.player.playerView.hidden = YES;
+        self.player = nil;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

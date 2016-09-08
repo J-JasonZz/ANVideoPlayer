@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ANVideoPlayerLayerView.h"
 
+typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
+    ANVideoPlayerViewStatePortrait, // 竖屏播放
+    ANVideoPlayerViewStateLandscape, // 横屏播放
+    ANVideoPlayerViewStateWindow // 小窗播放
+};
+
 @protocol ANVideoPlayerViewDelegate <NSObject>
 
 - (void)closeButtonTapped;
@@ -30,6 +36,14 @@
 @interface ANVideoPlayerView : UIView
 
 @property (nonatomic, weak) id<ANVideoPlayerViewDelegate> delegate;
+
+// 播放器展示状态
+@property (nonatomic, assign) ANVideoPlayerViewState state;
+
+// 播放器单击手势
+@property (nonatomic, strong) UITapGestureRecognizer *playerViewTap;
+// 播放器拖动手势
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 
 // 播放视图
 @property (weak, nonatomic) IBOutlet ANVideoPlayerLayerView *playerLayerView;
@@ -57,6 +71,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *bigPlayButton;
 // 菊花
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *windowCloseButton;
 
 // 控制视图显示
 @property (nonatomic, assign) BOOL isControlsHidden;

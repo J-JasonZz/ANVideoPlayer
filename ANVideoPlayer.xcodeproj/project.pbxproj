@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E311D77CE130003E66C /* ANVideoPlayerView.m */; };
 		A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */; };
-		A8224E3D1D77FCB60003E66C /* ANVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E3B1D77FCB60003E66C /* ANVideoPlayerViewController.m */; };
 		A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */; };
 		A8224E511D780BE40003E66C /* ANVideoPlayer_cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E411D780BE40003E66C /* ANVideoPlayer_cross.png */; };
 		A8224E521D780BE40003E66C /* ANVideoPlayer_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E421D780BE40003E66C /* ANVideoPlayer_cross@2x.png */; };
@@ -62,8 +61,6 @@
 		A8224E311D77CE130003E66C /* ANVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerView.m; sourceTree = "<group>"; };
 		A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ANFoundation.h"; sourceTree = "<group>"; };
 		A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ANFoundation.m"; sourceTree = "<group>"; };
-		A8224E3A1D77FCB60003E66C /* ANVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerViewController.h; sourceTree = "<group>"; };
-		A8224E3B1D77FCB60003E66C /* ANVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerViewController.m; sourceTree = "<group>"; };
 		A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANVideoPlayer.xib; sourceTree = "<group>"; };
 		A8224E411D780BE40003E66C /* ANVideoPlayer_cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_cross.png; sourceTree = "<group>"; };
 		A8224E421D780BE40003E66C /* ANVideoPlayer_cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_cross@2x.png"; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		A8224E7E1D7819570003E66C /* ANVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play@2x.png"; sourceTree = "<group>"; };
 		A8224E7F1D7819570003E66C /* ANVideoPlayer_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@3x.png"; sourceTree = "<group>"; };
 		A8224E801D7819570003E66C /* ANVideoPlayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@2x.png"; sourceTree = "<group>"; };
-		A8224E851D781C160003E66C /* MainConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConfig.h; sourceTree = "<group>"; };
 		A8224E861D781F190003E66C /* UIView+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ANFoundation.h"; sourceTree = "<group>"; };
 		A8224E871D781F190003E66C /* UIView+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ANFoundation.m"; sourceTree = "<group>"; };
 		A8241D231D76F38A00EEE384 /* ANVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,7 +156,6 @@
 				A8241D2A1D76F38A00EEE384 /* AppDelegate.m */,
 				A8241D2C1D76F38A00EEE384 /* ViewController.h */,
 				A8241D2D1D76F38A00EEE384 /* ViewController.m */,
-				A8224E851D781C160003E66C /* MainConfig.h */,
 				A8241D2F1D76F38A00EEE384 /* Main.storyboard */,
 				A8241D321D76F38A00EEE384 /* Assets.xcassets */,
 				A8241D341D76F38A00EEE384 /* LaunchScreen.storyboard */,
@@ -206,8 +201,6 @@
 				A8224E311D77CE130003E66C /* ANVideoPlayerView.m */,
 				A8241D641D76F4BF00EEE384 /* ANVideoPlayerLayerView.h */,
 				A8241D651D76F4BF00EEE384 /* ANVideoPlayerLayerView.m */,
-				A8224E3A1D77FCB60003E66C /* ANVideoPlayerViewController.h */,
-				A8224E3B1D77FCB60003E66C /* ANVideoPlayerViewController.m */,
 				A8241D671D76F4D100EEE384 /* ANVideoPlayerConfig.h */,
 				A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */,
 				A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */,
@@ -391,7 +384,6 @@
 				A8241D661D76F4BF00EEE384 /* ANVideoPlayerLayerView.m in Sources */,
 				A8224E881D781F190003E66C /* UIView+ANFoundation.m in Sources */,
 				A8241D2E1D76F38A00EEE384 /* ViewController.m in Sources */,
-				A8224E3D1D77FCB60003E66C /* ANVideoPlayerViewController.m in Sources */,
 				A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */,
 				A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */,
 				A8241D601D76F49200EEE384 /* ANVideoPlayer.m in Sources */,
