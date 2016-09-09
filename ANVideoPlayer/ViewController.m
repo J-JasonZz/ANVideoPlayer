@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ANVideoPlayerUtil.h"
+#import "ANPlayerViewController.h"
 
 @interface ViewController ()
 
@@ -19,8 +19,9 @@
     [super viewDidLoad];
 }
 
-- (IBAction)presentAction:(id)sender {
-    [[ANVideoPlayerUtil shareUtil] playVideoWithStreamURL:[NSURL URLWithString:@"http://baobab.wdjcdn.com/14559682994064.mp4"]];
+- (IBAction)pushAction:(id)sender {
+    ANPlayerViewController *controller = [[ANPlayerViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

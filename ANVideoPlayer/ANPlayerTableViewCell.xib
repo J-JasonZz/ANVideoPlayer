@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ANPlayerTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="239.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hD4-KQ-c4R">
+                        <rect key="frame" x="15" y="45" width="345" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="ekH-J1-1Yh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="擦擦擦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB4-Uo-BeL">
+                        <rect key="frame" x="15" y="12" width="345" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Qra-cd-uBg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4D-lX-BSS">
+                        <rect key="frame" x="15" y="45" width="345" height="180"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30412176724137929" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="Ufg-aQ-GI0"/>
+                        </constraints>
+                        <state key="normal" image="video_list_cell_big_icon"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="playAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Xo-KI-aXc"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="hD4-KQ-c4R" secondAttribute="trailing" constant="7" id="4fV-eG-cgY"/>
+                    <constraint firstItem="v4D-lX-BSS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="72p-sm-uBb"/>
+                    <constraint firstItem="hD4-KQ-c4R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="9Pz-7J-747"/>
+                    <constraint firstItem="hD4-KQ-c4R" firstAttribute="top" secondItem="zB4-Uo-BeL" secondAttribute="bottom" constant="8" id="Cgg-nx-Q0O"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zB4-Uo-BeL" secondAttribute="trailing" constant="7" id="GOs-oN-b9b"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="v4D-lX-BSS" secondAttribute="trailing" constant="7" id="Hyg-eN-9df"/>
+                    <constraint firstItem="v4D-lX-BSS" firstAttribute="top" secondItem="zB4-Uo-BeL" secondAttribute="bottom" constant="8" id="Zjh-cw-tbT"/>
+                    <constraint firstItem="zB4-Uo-BeL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="g4T-Zc-hdG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="v4D-lX-BSS" secondAttribute="bottom" constant="6.5" id="jvq-cw-kqW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hD4-KQ-c4R" secondAttribute="bottom" constant="6.5" id="kgD-5Z-P1p"/>
+                    <constraint firstItem="zB4-Uo-BeL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="kun-mx-X74"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playerImageView" destination="hD4-KQ-c4R" id="o4u-0n-s6t"/>
+                <outlet property="playerTitle" destination="zB4-Uo-BeL" id="Gdg-Kf-1AX"/>
+            </connections>
+            <point key="canvasLocation" x="271.5" y="315"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="video_list_cell_big_icon" width="50" height="50"/>
+    </resources>
+</document>

@@ -229,7 +229,7 @@
     CGPoint translation = [panGesture translationInView:self];
 
     if (panGesture.state == UIGestureRecognizerStateBegan) {
-        [self startPanPlayerView];
+        if (self.state == ANVideoPlayerViewStatePortrait || self.state == ANVideoPlayerViewStateWindow) [self startPanPlayerView];
     }else if (panGesture.state == UIGestureRecognizerStateCancelled || panGesture.state == UIGestureRecognizerStateEnded){
         if (self.state == ANVideoPlayerViewStatePortrait) [self endPanPlayerViewWhenPortrait];
         if (self.state == ANVideoPlayerViewStateWindow) [self endPanPlayerViewWhenWindow];
@@ -242,17 +242,18 @@
 - (IBAction)closeButtonClick:(id)sender {
     if (_delegateFlags.closeButtonTapped) {
         [self stopControlsTimer];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
         [self.delegate closeButtonTapped];
     }
 }
 
 - (IBAction)windowButtonClick:(id)sender {
     self.isSwiping = YES;
+    self.state = ANVideoPlayerViewStateWindow;
     [UIView animateWithDuration:0.3 animations:^{
         self.frame = CGRectMake(KScreenBounds.size.width - 15.f - KWindowDisplayWidth, KScreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
     }completion:^(BOOL finished) {
         self.isSwiping = NO;
-        self.state = ANVideoPlayerViewStateWindow;
     }];
 }
 - (IBAction)windowCloseButtonClick:(id)sender {
@@ -313,6 +314,9 @@
     if (self.isSwiping) {
         return;
     }
+    
+    if (self.state == ANVideoPlayerViewStatePortrait) [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
     self.isSwiping = YES;
 }
 
@@ -338,17 +342,18 @@
     if (!self.isSwiping) return;
 
     if (self.frame.origin.x >= 50.f) {
+        self.state = ANVideoPlayerViewStateWindow;
         [UIView animateWithDuration:0.3 animations:^{
             self.frame = CGRectMake(KScreenBounds.size.width - 15.f - KWindowDisplayWidth, KScreenBounds.size.height - KWindowDisplayHeight - 45.f, KWindowDisplayWidth, KWindowDisplayHeight);
         }completion:^(BOOL finished) {
             self.isSwiping = NO;
-            self.state = ANVideoPlayerViewStateWindow;
         }];
     } else {
         [UIView animateWithDuration:0.3 animations:^{
             self.frame = KScreenBounds;
         }completion:^(BOOL finished) {
             self.isSwiping = NO;
+            [[UIApplication sharedApplication] setStatusBarHidden:YES];
         }];
     }
 }

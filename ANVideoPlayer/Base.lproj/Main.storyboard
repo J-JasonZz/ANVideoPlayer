@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eCb-lW-85N">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToE-LQ-i0L">
-                                <rect key="frame" x="274" y="285" width="53" height="30"/>
+                                <rect key="frame" x="283" y="285" width="35" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="53" id="8Bn-NV-Egp"/>
+                                    <constraint firstAttribute="width" constant="35" id="8Bn-NV-Egp"/>
                                     <constraint firstAttribute="height" constant="30" id="ML9-VK-Ttb"/>
                                 </constraints>
-                                <state key="normal" title="Present"/>
+                                <state key="normal" title="Push"/>
                                 <connections>
-                                    <action selector="presentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EMV-mZ-avY"/>
+                                    <action selector="pushAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOj-8a-aa1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,9 +35,29 @@
                             <constraint firstItem="ToE-LQ-i0L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pMN-Qc-nLv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="l2T-3T-rZs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1065" y="-345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eqC-yA-rwt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eCb-lW-85N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="icT-ew-cgR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rLl-GD-sfO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjc-q3-AgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="-345"/>
         </scene>
     </scenes>
 </document>
