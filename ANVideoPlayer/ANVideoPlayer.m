@@ -57,7 +57,6 @@
     [self.playerView setDelegate:self];
     
     self.state = ANVideoPlayerStateUnknown;
-    self.playerView.state = ANVideoPlayerViewStatePortrait;
 
     self.portraitFrame = CGRectMake(0, 0, MIN(KScreenBounds.size.width, KScreenBounds.size.height), MAX(KScreenBounds.size.width, KScreenBounds.size.height));
     self.landscapeFrame = CGRectMake(0, 0, MAX(KScreenBounds.size.width, KScreenBounds.size.height), MIN(KScreenBounds.size.width, KScreenBounds.size.height));
@@ -91,6 +90,7 @@
 {
     _steamURL = streamURL;
     self.state = ANVideoPlayerStateContentLoading;
+    self.playerView.state = ANVideoPlayerViewStatePortrait;
     
     if (_steamURL == nil) {
         return;
@@ -548,9 +548,6 @@
 #pragma mark -- ANVideoPlayerViewDelegate
 - (void)closeButtonTapped
 {
-    if (self.isFullScreen) {
-        [self performOrientationChange:UIInterfaceOrientationPortrait];
-    }
     if (_delegateFlags.closeButtonClick) {
         [self.delegate videoPlayer:self closeButtonClick:self.playerView.closeButton];
     }
@@ -569,8 +566,10 @@
     
     if (self.isFullScreen) {
         [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
+        self.playerView.state = ANVideoPlayerViewStateLandscape;
     } else {
         [self performOrientationChange:UIInterfaceOrientationPortrait];
+        self.playerView.state = ANVideoPlayerViewStatePortrait;
     }
 }
 

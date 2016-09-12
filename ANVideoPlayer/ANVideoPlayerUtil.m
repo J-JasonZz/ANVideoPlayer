@@ -28,6 +28,7 @@
 
 - (void)playVideoWithStreamURL:(NSURL *)streamURL
 {
+    NSLog(@"play");
     [self.currentPlayer.playerView removeFromSuperview];
     self.currentPlayer = nil;
     

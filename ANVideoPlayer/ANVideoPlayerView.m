@@ -12,7 +12,7 @@
 #define KControlsHideInterval 5.f
 
 #define KWindowDisplayWidth 170.f
-#define KWindowDisplayHeight 95.f
+#define KWindowDisplayHeight 170.f / (16.f / 9.f)
 
 @interface ANVideoPlayerView ()
 
@@ -124,11 +124,15 @@
 
 - (void)setState:(ANVideoPlayerViewState)state
 {
+    ANVideoPlayerViewState oldState = _state;
     _state = state;
     switch (self.state) {
         case ANVideoPlayerViewStatePortrait:
             self.windowCloseButton.hidden = YES;
-            self.controlView.hidden = NO;
+            if (oldState == ANVideoPlayerViewStateWindow) {
+                self.controlView.hidden = NO;
+                self.isControlsHidden = NO;
+            }
             self.windowButton.hidden = NO;
             [[UIApplication sharedApplication] setStatusBarHidden:YES];
             [self startControlsTimer];
@@ -139,6 +143,7 @@
         case ANVideoPlayerViewStateWindow:
             self.windowCloseButton.hidden = NO;
             self.controlView.hidden = YES;
+            self.isControlsHidden = YES;
             [[UIApplication sharedApplication] setStatusBarHidden:NO];
             [self stopControlsTimer];
             break;
