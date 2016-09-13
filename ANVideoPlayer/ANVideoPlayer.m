@@ -76,7 +76,6 @@
 - (void)addObserver
 {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    
     // AVPlayer状态
     [notificationCenter addObserver:self selector:@selector(playerItemReadyToPlay) name:KANVideoPlayerItemReadyToPlay object:nil];
     [notificationCenter addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:[UIDevice currentDevice]];
@@ -84,6 +83,9 @@
     // app状态
     [notificationCenter addObserver:self selector:@selector(playerWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     [notificationCenter addObserver:self selector:@selector(playerDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    // 耳机插拔
+    [notificationCenter addObserver:self selector:@selector(audioRouteChangeListenerCallback:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
 }
 
 - (void)loadVideoWithStreamURL:(NSURL *)streamURL
@@ -91,6 +93,8 @@
     _steamURL = streamURL;
     self.state = ANVideoPlayerStateContentLoading;
     self.playerView.state = ANVideoPlayerViewStatePortrait;
+    // 视频未加载完成时不允许拖动进度条，以免造成崩溃
+    self.playerView.scrubber.enabled = NO;
     
     if (_steamURL == nil) {
         return;
@@ -305,6 +309,8 @@
             case ANVideoPlayerStateContentLoading:{}
             case ANVideoPlayerStateError:{
                 [self pauseContent:NO completionHandler:^{
+                    // 当视频加载完成时允许拖动进度条
+                    self.playerView.scrubber.enabled = YES;
                     [self seekToZeroDuration];
                 }];
                 break;
@@ -361,7 +367,31 @@
 
 - (void)playerDidBecomeActive:(NSNotification *)notification
 {
+    // 如果播放完成后暂停，进入前台时不必自动播放
+    if (self.playerView.scrubber.value >= self.playerView.scrubber.maximumValue) {
+        return;
+    }
     [self playContent];
+}
+
+- (void)audioRouteChangeListenerCallback:(NSNotification *)notification
+{
+    NSDictionary *interuptionDict = notification.userInfo;
+    NSInteger routeChangeReason = [[interuptionDict valueForKey:AVAudioSessionRouteChangeReasonKey] integerValue];
+    switch (routeChangeReason) {
+        case AVAudioSessionRouteChangeReasonNewDeviceAvailable:
+            //插入耳机
+            
+            break;
+        case AVAudioSessionRouteChangeReasonOldDeviceUnavailable:
+            //拔出耳机
+            self.state = ANVideoPlayerStateContentPaused;
+            break;
+        case AVAudioSessionRouteChangeReasonCategoryChange:
+            // called at start - also when other audio wants to play
+            NSLog(@"AVAudioSessionRouteChangeReasonCategoryChange");
+            break;
+    }
 }
 
 #pragma mark -- DeivceOrientation
