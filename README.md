@@ -2,8 +2,8 @@
 
 
 ####能一行代码搞定视频播放的轻量级播放器
-![](/Users/Memebox/Desktop/1111.gif)
-![](/Users/Memebox/Desktop/2222.gif)
+![](1111.gif)
+![](2222.gif)
 
 ##集成步骤：
 ### 1. 实时同步预览把 ANVideoPlayer 文件夹拖入工程
