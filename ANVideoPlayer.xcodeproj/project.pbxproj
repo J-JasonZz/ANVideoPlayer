@@ -49,7 +49,6 @@
 		A8372D981D82AE8500B62487 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = A8372D971D82AE8400B62487 /* videoData.json */; };
 		A86E5E9E1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A86E5E9C1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png */; };
 		A86E5E9F1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A86E5E9D1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png */; };
-		BAC77E9CE551AE3C77D4F868 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174BAC2112F2B6086FB6956F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +139,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAC77E9CE551AE3C77D4F868 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +365,12 @@
 		A8241D1B1D76F38A00EEE384 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = wscn;
 				TargetAttributes = {
 					A8241D221D76F38A00EEE384 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8ELEEZRLRH;
 					};
 					A8241D3B1D76F38A00EEE384 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -588,8 +587,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -633,8 +634,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -663,6 +666,7 @@
 			baseConfigurationReference = 4DDED72BCF9D8AC3F22EB7D4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8ELEEZRLRH;
 				INFOPLIST_FILE = ANVideoPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -676,6 +680,7 @@
 			baseConfigurationReference = 6C9F9C9D3F517A088A4DB173 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8ELEEZRLRH;
 				INFOPLIST_FILE = ANVideoPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
