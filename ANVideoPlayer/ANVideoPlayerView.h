@@ -41,6 +41,8 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
 
 // 播放器展示状态
 @property (nonatomic, assign) ANVideoPlayerViewState state;
+// 是否是直播
+@property (nonatomic, assign) BOOL isLive;
 
 // 播放器单击手势
 @property (nonatomic, strong) UITapGestureRecognizer *playerViewTap;
@@ -69,6 +71,10 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerViewState){
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 // 全屏按钮
 @property (weak, nonatomic) IBOutlet UIButton *fullScreenButton;
+// 直播间隔view
+@property (weak, nonatomic) IBOutlet UIView *onLiveSpaceView;
+// 直播中按钮
+@property (weak, nonatomic) IBOutlet UIButton *onLiveButton;
 
 // 大播放按钮
 @property (weak, nonatomic) IBOutlet UIButton *bigPlayButton;

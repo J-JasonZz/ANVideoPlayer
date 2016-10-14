@@ -15,7 +15,7 @@
 
 + (instancetype)shareUtil;
 
-- (void)playVideoWithStreamURL:(NSURL *)streamURL;
+- (void)playVideoWithStreamURL:(NSURL *)streamURL isLive:(BOOL)isLive;
 
 - (void)dismissCurrentPlayer;
 @end

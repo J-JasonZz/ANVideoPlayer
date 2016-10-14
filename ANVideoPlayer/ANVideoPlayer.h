@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, ANVideoPlayerState){
 @property (nonatomic, assign) UIInterfaceOrientationMask supportedOrientations;
 
 @property (nonatomic, assign) BOOL isFullScreen;
+// 是否是直播
+@property (nonatomic, assign) BOOL isLive;
 
 - (void)loadVideoWithStreamURL:(NSURL*)streamURL;
 @end

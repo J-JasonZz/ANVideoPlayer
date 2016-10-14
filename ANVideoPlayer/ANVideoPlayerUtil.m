@@ -26,7 +26,7 @@
     return util;
 }
 
-- (void)playVideoWithStreamURL:(NSURL *)streamURL
+- (void)playVideoWithStreamURL:(NSURL *)streamURL isLive:(BOOL)isLive
 {
     NSLog(@"play");
     [self.currentPlayer.playerView removeFromSuperview];
@@ -35,6 +35,7 @@
     self.currentPlayer = [[ANVideoPlayer alloc] init];
     self.currentPlayer.playerView.frame = [UIScreen mainScreen].bounds;
     self.currentPlayer.delegate = self;
+    self.currentPlayer.isLive = isLive;
     self.currentPlayer.playerView.alpha = 0.0;
     [[UIApplication sharedApplication].delegate.window addSubview:self.currentPlayer.playerView];
     

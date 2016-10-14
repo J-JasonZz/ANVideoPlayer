@@ -152,11 +152,34 @@
     }
 }
 
+- (void)setIsLive:(BOOL)isLive
+{
+    _isLive = isLive;
+    _isLive ? [self setPlayerViewOnLive] : [self setPlayerViewsOnDemand];
+}
+// 点播
+- (void)setPlayerViewsOnDemand
+{
+    self.onLiveSpaceView.hidden = YES;
+    self.onLiveButton.hidden = YES;
+}
+// 直播
+- (void)setPlayerViewOnLive
+{
+    self.scrubber.hidden = YES;
+    self.loadedTimeRangesProgress.hidden = YES;
+    self.timeLabel.hidden = YES;
+}
+
 #pragma mark -- Observer
 - (void)durationDidLoad:(NSNotification *)notification
 {
     NSDictionary *info = [notification userInfo];
     NSNumber* duration = [info objectForKey:@"duration"];
+    
+    if (!([duration floatValue] > 0)) {
+        return;
+    }
     
     RUN_ON_UI_THREAD(^{
         self.scrubber.maximumValue = [duration floatValue];
@@ -166,6 +189,9 @@
 - (void)scrubberValueUpdated:(NSNotification *)notification
 {
     NSDictionary *info = [notification userInfo];
+    if ([[info objectForKey:@"scrubberValue"] floatValue] <= 0) {
+        return;
+    }
     RUN_ON_UI_THREAD(^{
         [self.scrubber setValue:[[info objectForKey:@"scrubberValue"] floatValue] animated:YES];
         [self updateTimeLabel];

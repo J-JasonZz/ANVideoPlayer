@@ -67,6 +67,12 @@
     [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
+- (void)setIsLive:(BOOL)isLive
+{
+    _isLive = isLive;
+    self.playerView.isLive = _isLive;
+}
+
 - (void)setDelegate:(id<ANVideoPlayerDelegate>)delegate
 {
     _delegate = delegate;
@@ -525,7 +531,7 @@
             self.playerView.bigPlayButton.selected = NO;
             self.playerView.playButton.enabled = YES;
             self.playerView.scrubber.enabled = YES;
-            self.playerView.loadedTimeRangesProgress.hidden = NO;
+            self.playerView.loadedTimeRangesProgress.hidden = self.isLive;
             [self.player play];
             break;
         case ANVideoPlayerStateContentPaused:

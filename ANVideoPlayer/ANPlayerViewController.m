@@ -75,7 +75,7 @@
     [cell assginValueWithPlayerModel:model];
     
     cell.playButtonClick = ^{
-        [[ANVideoPlayerUtil shareUtil] playVideoWithStreamURL:[NSURL URLWithString:model.playUrl]];
+        [[ANVideoPlayerUtil shareUtil] playVideoWithStreamURL:[NSURL URLWithString:model.playUrl] isLive:NO];
     };
     
     return cell;
