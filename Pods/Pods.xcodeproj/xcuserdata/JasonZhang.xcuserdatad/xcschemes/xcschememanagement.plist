@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-ANVideoPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>122BC0DDFA2D0FAD098E79F9FF495B56</key>
+		<key>20209F25B8C0185426E54DE54C28F1FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAEA868BA328BE96EDD68B17F7660DB0</key>
+		<key>9CA6CA77CBDF4E3A623FD3956D6B582B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

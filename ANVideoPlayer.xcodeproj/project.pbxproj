@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A113C79D96D543706CE7AB18 /* libPods-ANVideoPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */; };
 		A81152531D81056300819C5F /* ANVideoPlayer_windowClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */; };
 		A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */; };
 		A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */; };
@@ -69,9 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		174BAC2112F2B6086FB6956F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DDED72BCF9D8AC3F22EB7D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		6C9F9C9D3F517A088A4DB173 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		18E9FD307B24B4B6AE4ED400 /* Pods-ANVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANVideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		93B6766886B4CB2E42000209 /* Pods-ANVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANVideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@3x.png"; sourceTree = "<group>"; };
 		A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@2x.png"; sourceTree = "<group>"; };
 		A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@2x.png"; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 		A8372D971D82AE8400B62487 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
 		A86E5E9C1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@2x.png"; sourceTree = "<group>"; };
 		A86E5E9D1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@3x.png"; sourceTree = "<group>"; };
+		C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ANVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A113C79D96D543706CE7AB18 /* libPods-ANVideoPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,10 +161,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5FFEFEEAE204FE70AD735E7E /* Frameworks */ = {
+		0B1DFAAEB10E9ABB42E72669 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				174BAC2112F2B6086FB6956F /* libPods.a */,
+				18E9FD307B24B4B6AE4ED400 /* Pods-ANVideoPlayer.debug.xcconfig */,
+				93B6766886B4CB2E42000209 /* Pods-ANVideoPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		74FC049ACAC900D492F82E9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,8 +185,8 @@
 				A8241D3F1D76F38A00EEE384 /* ANVideoPlayerTests */,
 				A8241D4A1D76F38A00EEE384 /* ANVideoPlayerUITests */,
 				A8241D241D76F38A00EEE384 /* Products */,
-				BFB730DB73342C2E88288799 /* Pods */,
-				5FFEFEEAE204FE70AD735E7E /* Frameworks */,
+				0B1DFAAEB10E9ABB42E72669 /* Pods */,
+				74FC049ACAC900D492F82E9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,15 +302,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		BFB730DB73342C2E88288799 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4DDED72BCF9D8AC3F22EB7D4 /* Pods.debug.xcconfig */,
-				6C9F9C9D3F517A088A4DB173 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,12 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8241D501D76F38A00EEE384 /* Build configuration list for PBXNativeTarget "ANVideoPlayer" */;
 			buildPhases = (
-				D77BC0E7A2747A8E1642A19B /* Check Pods Manifest.lock */,
+				37CCD1C394720641B1D981D8 /* [CP] Check Pods Manifest.lock */,
 				A8241D1F1D76F38A00EEE384 /* Sources */,
 				A8241D201D76F38A00EEE384 /* Frameworks */,
 				A8241D211D76F38A00EEE384 /* Resources */,
-				66FFC2053726196657ADDBAD /* Embed Pods Frameworks */,
-				8C854C9AD128F878A33BE9F5 /* Copy Pods Resources */,
+				359BF3593F03F22366B52FE3 /* [CP] Embed Pods Frameworks */,
+				5F3973E320C18CE5D44B6747 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,7 +372,7 @@
 				TargetAttributes = {
 					A8241D221D76F38A00EEE384 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8ELEEZRLRH;
+						DevelopmentTeam = 49FUNDNGC6;
 					};
 					A8241D3B1D76F38A00EEE384 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -455,49 +457,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		66FFC2053726196657ADDBAD /* Embed Pods Frameworks */ = {
+		359BF3593F03F22366B52FE3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C854C9AD128F878A33BE9F5 /* Copy Pods Resources */ = {
+		37CCD1C394720641B1D981D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D77BC0E7A2747A8E1642A19B /* Check Pods Manifest.lock */ = {
+		5F3973E320C18CE5D44B6747 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -663,10 +665,10 @@
 		};
 		A8241D511D76F38A00EEE384 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DDED72BCF9D8AC3F22EB7D4 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 18E9FD307B24B4B6AE4ED400 /* Pods-ANVideoPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8ELEEZRLRH;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
 				INFOPLIST_FILE = ANVideoPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -677,10 +679,10 @@
 		};
 		A8241D521D76F38A00EEE384 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C9F9C9D3F517A088A4DB173 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 93B6766886B4CB2E42000209 /* Pods-ANVideoPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8ELEEZRLRH;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
 				INFOPLIST_FILE = ANVideoPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
