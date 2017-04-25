@@ -452,7 +452,6 @@
             return 180;
             break;
         default:
-            NSLog(@"%ld", deviceOrientation);
             break;
     }
     return 0;
