@@ -661,7 +661,7 @@
 
 
 #pragma mark -- AVPlayerCategory
-@implementation AVPlayer (VKPlayer)
+@implementation AVPlayer (ANPlayer)
 
 - (void)seekToTimeInSeconds:(float)time completionHandler:(void (^)(BOOL finished))completionHandler {
     if ([self respondsToSelector:@selector(seekToTime:toleranceBefore:toleranceAfter:completionHandler:)]) {

@@ -8,31 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A113C79D96D543706CE7AB18 /* libPods-ANVideoPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */; };
-		A81152531D81056300819C5F /* ANVideoPlayer_windowClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */; };
-		A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */; };
-		A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */; };
-		A81152581D810EBF00819C5F /* ANVideoPlayer_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */; };
-		A81152991D8145DF00819C5F /* ANVideoPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */; };
-		A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E311D77CE130003E66C /* ANVideoPlayerView.m */; };
-		A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */; };
-		A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */; };
-		A8224E511D780BE40003E66C /* ANVideoPlayer_cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E411D780BE40003E66C /* ANVideoPlayer_cross.png */; };
-		A8224E521D780BE40003E66C /* ANVideoPlayer_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E421D780BE40003E66C /* ANVideoPlayer_cross@2x.png */; };
-		A8224E551D780BE40003E66C /* ANVideoPlayer_pause_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E451D780BE40003E66C /* ANVideoPlayer_pause_big.png */; };
-		A8224E561D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E461D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png */; };
-		A8224E591D780BE40003E66C /* ANVideoPlayer_play_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E491D780BE40003E66C /* ANVideoPlayer_play_big.png */; };
-		A8224E5A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E4A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png */; };
-		A8224E6B1D7816900003E66C /* ANScrubber_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E691D7816900003E66C /* ANScrubber_thumb@2x.png */; };
-		A8224E6C1D7816900003E66C /* ANScrubber_thumb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E6A1D7816900003E66C /* ANScrubber_thumb@3x.png */; };
-		A8224E791D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E751D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png */; };
-		A8224E7A1D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E761D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png */; };
-		A8224E7B1D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E771D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png */; };
-		A8224E7C1D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E781D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png */; };
-		A8224E811D7819570003E66C /* ANVideoPlayer_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E7D1D7819570003E66C /* ANVideoPlayer_play@3x.png */; };
-		A8224E821D7819570003E66C /* ANVideoPlayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E7E1D7819570003E66C /* ANVideoPlayer_play@2x.png */; };
-		A8224E831D7819570003E66C /* ANVideoPlayer_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E7F1D7819570003E66C /* ANVideoPlayer_pause@3x.png */; };
-		A8224E841D7819570003E66C /* ANVideoPlayer_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8224E801D7819570003E66C /* ANVideoPlayer_pause@2x.png */; };
-		A8224E881D781F190003E66C /* UIView+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8224E871D781F190003E66C /* UIView+ANFoundation.m */; };
 		A8241D281D76F38A00EEE384 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D271D76F38A00EEE384 /* main.m */; };
 		A8241D2B1D76F38A00EEE384 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D2A1D76F38A00EEE384 /* AppDelegate.m */; };
 		A8241D2E1D76F38A00EEE384 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D2D1D76F38A00EEE384 /* ViewController.m */; };
@@ -41,15 +16,40 @@
 		A8241D361D76F38A00EEE384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8241D341D76F38A00EEE384 /* LaunchScreen.storyboard */; };
 		A8241D411D76F38A00EEE384 /* ANVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D401D76F38A00EEE384 /* ANVideoPlayerTests.m */; };
 		A8241D4C1D76F38A00EEE384 /* ANVideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D4B1D76F38A00EEE384 /* ANVideoPlayerUITests.m */; };
-		A8241D601D76F49200EEE384 /* ANVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D5F1D76F49200EEE384 /* ANVideoPlayer.m */; };
-		A8241D661D76F4BF00EEE384 /* ANVideoPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8241D651D76F4BF00EEE384 /* ANVideoPlayerLayerView.m */; };
 		A8372D8C1D82A7A100B62487 /* ANPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8372D8B1D82A7A100B62487 /* ANPlayerViewController.m */; };
 		A8372D911D82AACC00B62487 /* ANPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A8372D901D82AACC00B62487 /* ANPlayerModel.m */; };
 		A8372D951D82AB6500B62487 /* ANPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8372D931D82AB6500B62487 /* ANPlayerTableViewCell.m */; };
 		A8372D961D82AB6500B62487 /* ANPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8372D941D82AB6500B62487 /* ANPlayerTableViewCell.xib */; };
 		A8372D981D82AE8500B62487 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = A8372D971D82AE8400B62487 /* videoData.json */; };
-		A86E5E9E1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A86E5E9C1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png */; };
-		A86E5E9F1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A86E5E9D1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png */; };
+		A88B30E91EAF338700284185 /* ANVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30C51EAF338700284185 /* ANVideoPlayer.m */; };
+		A88B30EA1EAF338700284185 /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88B30C61EAF338700284185 /* ANVideoPlayer.xib */; };
+		A88B30EB1EAF338700284185 /* ANVideoPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */; };
+		A88B30EC1EAF338700284185 /* ANVideoPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30CB1EAF338700284185 /* ANVideoPlayerUtil.m */; };
+		A88B30ED1EAF338700284185 /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30CD1EAF338700284185 /* ANVideoPlayerView.m */; };
+		A88B30EE1EAF338700284185 /* NSObject+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30CF1EAF338700284185 /* NSObject+ANFoundation.m */; };
+		A88B30EF1EAF338700284185 /* UIView+ANFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30D11EAF338700284185 /* UIView+ANFoundation.m */; };
+		A88B30F01EAF338700284185 /* ANScrubber_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D31EAF338700284185 /* ANScrubber_thumb@2x.png */; };
+		A88B30F11EAF338700284185 /* ANScrubber_thumb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D41EAF338700284185 /* ANScrubber_thumb@3x.png */; };
+		A88B30F21EAF338700284185 /* ANVideoPlayer_cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D51EAF338700284185 /* ANVideoPlayer_cross.png */; };
+		A88B30F31EAF338700284185 /* ANVideoPlayer_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D61EAF338700284185 /* ANVideoPlayer_cross@2x.png */; };
+		A88B30F41EAF338700284185 /* ANVideoPlayer_onLive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D71EAF338700284185 /* ANVideoPlayer_onLive@2x.png */; };
+		A88B30F51EAF338700284185 /* ANVideoPlayer_onLive@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D81EAF338700284185 /* ANVideoPlayer_onLive@3x.png */; };
+		A88B30F61EAF338700284185 /* ANVideoPlayer_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30D91EAF338700284185 /* ANVideoPlayer_pause@2x.png */; };
+		A88B30F71EAF338700284185 /* ANVideoPlayer_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DA1EAF338700284185 /* ANVideoPlayer_pause@3x.png */; };
+		A88B30F81EAF338700284185 /* ANVideoPlayer_pause_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DB1EAF338700284185 /* ANVideoPlayer_pause_big.png */; };
+		A88B30F91EAF338700284185 /* ANVideoPlayer_pause_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DC1EAF338700284185 /* ANVideoPlayer_pause_big@2x.png */; };
+		A88B30FA1EAF338700284185 /* ANVideoPlayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DD1EAF338700284185 /* ANVideoPlayer_play@2x.png */; };
+		A88B30FB1EAF338700284185 /* ANVideoPlayer_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DE1EAF338700284185 /* ANVideoPlayer_play@3x.png */; };
+		A88B30FC1EAF338700284185 /* ANVideoPlayer_play_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30DF1EAF338700284185 /* ANVideoPlayer_play_big.png */; };
+		A88B30FD1EAF338700284185 /* ANVideoPlayer_play_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E01EAF338700284185 /* ANVideoPlayer_play_big@2x.png */; };
+		A88B30FE1EAF338700284185 /* ANVideoPlayer_window@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E11EAF338700284185 /* ANVideoPlayer_window@2x.png */; };
+		A88B30FF1EAF338700284185 /* ANVideoPlayer_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E21EAF338700284185 /* ANVideoPlayer_window@3x.png */; };
+		A88B31001EAF338700284185 /* ANVideoPlayer_windowClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E31EAF338700284185 /* ANVideoPlayer_windowClose@2x.png */; };
+		A88B31011EAF338700284185 /* ANVideoPlayer_windowClose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E41EAF338700284185 /* ANVideoPlayer_windowClose@3x.png */; };
+		A88B31021EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E51EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png */; };
+		A88B31031EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */; };
+		A88B31041EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */; };
+		A88B31051EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,35 +72,6 @@
 /* Begin PBXFileReference section */
 		18E9FD307B24B4B6AE4ED400 /* Pods-ANVideoPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANVideoPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		93B6766886B4CB2E42000209 /* Pods-ANVideoPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANVideoPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ANVideoPlayer/Pods-ANVideoPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@3x.png"; sourceTree = "<group>"; };
-		A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@2x.png"; sourceTree = "<group>"; };
-		A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@2x.png"; sourceTree = "<group>"; };
-		A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@3x.png"; sourceTree = "<group>"; };
-		A81152971D8145DF00819C5F /* ANVideoPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerUtil.h; sourceTree = "<group>"; };
-		A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerUtil.m; sourceTree = "<group>"; };
-		A8224E301D77CE130003E66C /* ANVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerView.h; sourceTree = "<group>"; };
-		A8224E311D77CE130003E66C /* ANVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerView.m; sourceTree = "<group>"; };
-		A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ANFoundation.h"; sourceTree = "<group>"; };
-		A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ANFoundation.m"; sourceTree = "<group>"; };
-		A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANVideoPlayer.xib; sourceTree = "<group>"; };
-		A8224E411D780BE40003E66C /* ANVideoPlayer_cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_cross.png; sourceTree = "<group>"; };
-		A8224E421D780BE40003E66C /* ANVideoPlayer_cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_cross@2x.png"; sourceTree = "<group>"; };
-		A8224E451D780BE40003E66C /* ANVideoPlayer_pause_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_pause_big.png; sourceTree = "<group>"; };
-		A8224E461D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause_big@2x.png"; sourceTree = "<group>"; };
-		A8224E491D780BE40003E66C /* ANVideoPlayer_play_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_play_big.png; sourceTree = "<group>"; };
-		A8224E4A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play_big@2x.png"; sourceTree = "<group>"; };
-		A8224E691D7816900003E66C /* ANScrubber_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANScrubber_thumb@2x.png"; sourceTree = "<group>"; };
-		A8224E6A1D7816900003E66C /* ANScrubber_thumb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANScrubber_thumb@3x.png"; sourceTree = "<group>"; };
-		A8224E751D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@2x.png"; sourceTree = "<group>"; };
-		A8224E761D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@3x.png"; sourceTree = "<group>"; };
-		A8224E771D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_in@2x.png"; sourceTree = "<group>"; };
-		A8224E781D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_in@3x.png"; sourceTree = "<group>"; };
-		A8224E7D1D7819570003E66C /* ANVideoPlayer_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play@3x.png"; sourceTree = "<group>"; };
-		A8224E7E1D7819570003E66C /* ANVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play@2x.png"; sourceTree = "<group>"; };
-		A8224E7F1D7819570003E66C /* ANVideoPlayer_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@3x.png"; sourceTree = "<group>"; };
-		A8224E801D7819570003E66C /* ANVideoPlayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@2x.png"; sourceTree = "<group>"; };
-		A8224E861D781F190003E66C /* UIView+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ANFoundation.h"; sourceTree = "<group>"; };
-		A8224E871D781F190003E66C /* UIView+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ANFoundation.m"; sourceTree = "<group>"; };
 		A8241D231D76F38A00EEE384 /* ANVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8241D271D76F38A00EEE384 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8241D291D76F38A00EEE384 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,11 +88,6 @@
 		A8241D471D76F38A00EEE384 /* ANVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8241D4B1D76F38A00EEE384 /* ANVideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerUITests.m; sourceTree = "<group>"; };
 		A8241D4D1D76F38A00EEE384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8241D5E1D76F49200EEE384 /* ANVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayer.h; sourceTree = "<group>"; };
-		A8241D5F1D76F49200EEE384 /* ANVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayer.m; sourceTree = "<group>"; };
-		A8241D641D76F4BF00EEE384 /* ANVideoPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerLayerView.h; sourceTree = "<group>"; };
-		A8241D651D76F4BF00EEE384 /* ANVideoPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerLayerView.m; sourceTree = "<group>"; };
-		A8241D671D76F4D100EEE384 /* ANVideoPlayerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerConfig.h; sourceTree = "<group>"; };
 		A8372D8A1D82A7A100B62487 /* ANPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPlayerViewController.h; sourceTree = "<group>"; };
 		A8372D8B1D82A7A100B62487 /* ANPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPlayerViewController.m; sourceTree = "<group>"; };
 		A8372D8F1D82AACC00B62487 /* ANPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPlayerModel.h; sourceTree = "<group>"; };
@@ -130,8 +96,42 @@
 		A8372D931D82AB6500B62487 /* ANPlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPlayerTableViewCell.m; sourceTree = "<group>"; };
 		A8372D941D82AB6500B62487 /* ANPlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANPlayerTableViewCell.xib; sourceTree = "<group>"; };
 		A8372D971D82AE8400B62487 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
-		A86E5E9C1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@2x.png"; sourceTree = "<group>"; };
-		A86E5E9D1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@3x.png"; sourceTree = "<group>"; };
+		A88B30C41EAF338700284185 /* ANVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayer.h; sourceTree = "<group>"; };
+		A88B30C51EAF338700284185 /* ANVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayer.m; sourceTree = "<group>"; };
+		A88B30C61EAF338700284185 /* ANVideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANVideoPlayer.xib; sourceTree = "<group>"; };
+		A88B30C71EAF338700284185 /* ANVideoPlayerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerConfig.h; sourceTree = "<group>"; };
+		A88B30C81EAF338700284185 /* ANVideoPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerLayerView.h; sourceTree = "<group>"; };
+		A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerLayerView.m; sourceTree = "<group>"; };
+		A88B30CA1EAF338700284185 /* ANVideoPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerUtil.h; sourceTree = "<group>"; };
+		A88B30CB1EAF338700284185 /* ANVideoPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerUtil.m; sourceTree = "<group>"; };
+		A88B30CC1EAF338700284185 /* ANVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerView.h; sourceTree = "<group>"; };
+		A88B30CD1EAF338700284185 /* ANVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerView.m; sourceTree = "<group>"; };
+		A88B30CE1EAF338700284185 /* NSObject+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ANFoundation.h"; sourceTree = "<group>"; };
+		A88B30CF1EAF338700284185 /* NSObject+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ANFoundation.m"; sourceTree = "<group>"; };
+		A88B30D01EAF338700284185 /* UIView+ANFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ANFoundation.h"; sourceTree = "<group>"; };
+		A88B30D11EAF338700284185 /* UIView+ANFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ANFoundation.m"; sourceTree = "<group>"; };
+		A88B30D31EAF338700284185 /* ANScrubber_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANScrubber_thumb@2x.png"; sourceTree = "<group>"; };
+		A88B30D41EAF338700284185 /* ANScrubber_thumb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANScrubber_thumb@3x.png"; sourceTree = "<group>"; };
+		A88B30D51EAF338700284185 /* ANVideoPlayer_cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_cross.png; sourceTree = "<group>"; };
+		A88B30D61EAF338700284185 /* ANVideoPlayer_cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_cross@2x.png"; sourceTree = "<group>"; };
+		A88B30D71EAF338700284185 /* ANVideoPlayer_onLive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@2x.png"; sourceTree = "<group>"; };
+		A88B30D81EAF338700284185 /* ANVideoPlayer_onLive@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_onLive@3x.png"; sourceTree = "<group>"; };
+		A88B30D91EAF338700284185 /* ANVideoPlayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@2x.png"; sourceTree = "<group>"; };
+		A88B30DA1EAF338700284185 /* ANVideoPlayer_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause@3x.png"; sourceTree = "<group>"; };
+		A88B30DB1EAF338700284185 /* ANVideoPlayer_pause_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_pause_big.png; sourceTree = "<group>"; };
+		A88B30DC1EAF338700284185 /* ANVideoPlayer_pause_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_pause_big@2x.png"; sourceTree = "<group>"; };
+		A88B30DD1EAF338700284185 /* ANVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play@2x.png"; sourceTree = "<group>"; };
+		A88B30DE1EAF338700284185 /* ANVideoPlayer_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play@3x.png"; sourceTree = "<group>"; };
+		A88B30DF1EAF338700284185 /* ANVideoPlayer_play_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ANVideoPlayer_play_big.png; sourceTree = "<group>"; };
+		A88B30E01EAF338700284185 /* ANVideoPlayer_play_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_play_big@2x.png"; sourceTree = "<group>"; };
+		A88B30E11EAF338700284185 /* ANVideoPlayer_window@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@2x.png"; sourceTree = "<group>"; };
+		A88B30E21EAF338700284185 /* ANVideoPlayer_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_window@3x.png"; sourceTree = "<group>"; };
+		A88B30E31EAF338700284185 /* ANVideoPlayer_windowClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@2x.png"; sourceTree = "<group>"; };
+		A88B30E41EAF338700284185 /* ANVideoPlayer_windowClose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_windowClose@3x.png"; sourceTree = "<group>"; };
+		A88B30E51EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_in@2x.png"; sourceTree = "<group>"; };
+		A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_in@3x.png"; sourceTree = "<group>"; };
+		A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@2x.png"; sourceTree = "<group>"; };
+		A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@3x.png"; sourceTree = "<group>"; };
 		C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ANVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,7 +203,7 @@
 		A8241D251D76F38A00EEE384 /* ANVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A8241D591D76F39000EEE384 /* ANVideoPlayer */,
+				A88B30C21EAF338700284185 /* ANVideoPlayer */,
 				A8241D291D76F38A00EEE384 /* AppDelegate.h */,
 				A8241D2A1D76F38A00EEE384 /* AppDelegate.m */,
 				A8241D2C1D76F38A00EEE384 /* ViewController.h */,
@@ -251,55 +251,63 @@
 			path = ANVideoPlayerUITests;
 			sourceTree = "<group>";
 		};
-		A8241D591D76F39000EEE384 /* ANVideoPlayer */ = {
+		A88B30C21EAF338700284185 /* ANVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				A81152971D8145DF00819C5F /* ANVideoPlayerUtil.h */,
-				A81152981D8145DF00819C5F /* ANVideoPlayerUtil.m */,
-				A8241D5E1D76F49200EEE384 /* ANVideoPlayer.h */,
-				A8241D5F1D76F49200EEE384 /* ANVideoPlayer.m */,
-				A8224E3F1D7801430003E66C /* ANVideoPlayer.xib */,
-				A8224E301D77CE130003E66C /* ANVideoPlayerView.h */,
-				A8224E311D77CE130003E66C /* ANVideoPlayerView.m */,
-				A8241D641D76F4BF00EEE384 /* ANVideoPlayerLayerView.h */,
-				A8241D651D76F4BF00EEE384 /* ANVideoPlayerLayerView.m */,
-				A8241D671D76F4D100EEE384 /* ANVideoPlayerConfig.h */,
-				A8224E351D77D1F80003E66C /* NSObject+ANFoundation.h */,
-				A8224E361D77D1F80003E66C /* NSObject+ANFoundation.m */,
-				A8224E861D781F190003E66C /* UIView+ANFoundation.h */,
-				A8224E871D781F190003E66C /* UIView+ANFoundation.m */,
-				A8241D5A1D76F3CC00EEE384 /* Resources */,
+				A88B30C31EAF338700284185 /* Classes */,
+				A88B30D21EAF338700284185 /* Resources */,
 			);
-			name = ANVideoPlayer;
+			path = ANVideoPlayer;
 			sourceTree = "<group>";
 		};
-		A8241D5A1D76F3CC00EEE384 /* Resources */ = {
+		A88B30C31EAF338700284185 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A8224E411D780BE40003E66C /* ANVideoPlayer_cross.png */,
-				A8224E421D780BE40003E66C /* ANVideoPlayer_cross@2x.png */,
-				A8224E451D780BE40003E66C /* ANVideoPlayer_pause_big.png */,
-				A8224E461D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png */,
-				A8224E491D780BE40003E66C /* ANVideoPlayer_play_big.png */,
-				A8224E4A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png */,
-				A8224E691D7816900003E66C /* ANScrubber_thumb@2x.png */,
-				A8224E6A1D7816900003E66C /* ANScrubber_thumb@3x.png */,
-				A8224E751D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png */,
-				A8224E761D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png */,
-				A8224E771D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png */,
-				A8224E781D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png */,
-				A8224E7D1D7819570003E66C /* ANVideoPlayer_play@3x.png */,
-				A8224E7E1D7819570003E66C /* ANVideoPlayer_play@2x.png */,
-				A8224E7F1D7819570003E66C /* ANVideoPlayer_pause@3x.png */,
-				A8224E801D7819570003E66C /* ANVideoPlayer_pause@2x.png */,
-				A81152511D81056300819C5F /* ANVideoPlayer_windowClose@3x.png */,
-				A81152521D81056300819C5F /* ANVideoPlayer_windowClose@2x.png */,
-				A81152551D810EBF00819C5F /* ANVideoPlayer_window@2x.png */,
-				A81152561D810EBF00819C5F /* ANVideoPlayer_window@3x.png */,
-				A86E5E9C1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png */,
-				A86E5E9D1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png */,
+				A88B30C41EAF338700284185 /* ANVideoPlayer.h */,
+				A88B30C51EAF338700284185 /* ANVideoPlayer.m */,
+				A88B30C61EAF338700284185 /* ANVideoPlayer.xib */,
+				A88B30C71EAF338700284185 /* ANVideoPlayerConfig.h */,
+				A88B30C81EAF338700284185 /* ANVideoPlayerLayerView.h */,
+				A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */,
+				A88B30CA1EAF338700284185 /* ANVideoPlayerUtil.h */,
+				A88B30CB1EAF338700284185 /* ANVideoPlayerUtil.m */,
+				A88B30CC1EAF338700284185 /* ANVideoPlayerView.h */,
+				A88B30CD1EAF338700284185 /* ANVideoPlayerView.m */,
+				A88B30CE1EAF338700284185 /* NSObject+ANFoundation.h */,
+				A88B30CF1EAF338700284185 /* NSObject+ANFoundation.m */,
+				A88B30D01EAF338700284185 /* UIView+ANFoundation.h */,
+				A88B30D11EAF338700284185 /* UIView+ANFoundation.m */,
 			);
-			name = Resources;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A88B30D21EAF338700284185 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A88B30D31EAF338700284185 /* ANScrubber_thumb@2x.png */,
+				A88B30D41EAF338700284185 /* ANScrubber_thumb@3x.png */,
+				A88B30D51EAF338700284185 /* ANVideoPlayer_cross.png */,
+				A88B30D61EAF338700284185 /* ANVideoPlayer_cross@2x.png */,
+				A88B30D71EAF338700284185 /* ANVideoPlayer_onLive@2x.png */,
+				A88B30D81EAF338700284185 /* ANVideoPlayer_onLive@3x.png */,
+				A88B30D91EAF338700284185 /* ANVideoPlayer_pause@2x.png */,
+				A88B30DA1EAF338700284185 /* ANVideoPlayer_pause@3x.png */,
+				A88B30DB1EAF338700284185 /* ANVideoPlayer_pause_big.png */,
+				A88B30DC1EAF338700284185 /* ANVideoPlayer_pause_big@2x.png */,
+				A88B30DD1EAF338700284185 /* ANVideoPlayer_play@2x.png */,
+				A88B30DE1EAF338700284185 /* ANVideoPlayer_play@3x.png */,
+				A88B30DF1EAF338700284185 /* ANVideoPlayer_play_big.png */,
+				A88B30E01EAF338700284185 /* ANVideoPlayer_play_big@2x.png */,
+				A88B30E11EAF338700284185 /* ANVideoPlayer_window@2x.png */,
+				A88B30E21EAF338700284185 /* ANVideoPlayer_window@3x.png */,
+				A88B30E31EAF338700284185 /* ANVideoPlayer_windowClose@2x.png */,
+				A88B30E41EAF338700284185 /* ANVideoPlayer_windowClose@3x.png */,
+				A88B30E51EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png */,
+				A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */,
+				A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */,
+				A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,34 +417,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86E5E9F1DB0C2F30075846C /* ANVideoPlayer_onLive@3x.png in Resources */,
-				A8224E831D7819570003E66C /* ANVideoPlayer_pause@3x.png in Resources */,
-				A8224E7B1D7818C50003E66C /* ANVideoPlayer_zoom_in@2x.png in Resources */,
-				A8224E591D780BE40003E66C /* ANVideoPlayer_play_big.png in Resources */,
-				A81152581D810EBF00819C5F /* ANVideoPlayer_window@3x.png in Resources */,
-				A8224E811D7819570003E66C /* ANVideoPlayer_play@3x.png in Resources */,
+				A88B30F01EAF338700284185 /* ANScrubber_thumb@2x.png in Resources */,
+				A88B30F61EAF338700284185 /* ANVideoPlayer_pause@2x.png in Resources */,
 				A8372D981D82AE8500B62487 /* videoData.json in Resources */,
-				A8224E511D780BE40003E66C /* ANVideoPlayer_cross.png in Resources */,
-				A8224E551D780BE40003E66C /* ANVideoPlayer_pause_big.png in Resources */,
-				A8224E7A1D7818C50003E66C /* ANVideoPlayer_zoom_out@3x.png in Resources */,
-				A8224E5A1D780BE40003E66C /* ANVideoPlayer_play_big@2x.png in Resources */,
 				A8241D361D76F38A00EEE384 /* LaunchScreen.storyboard in Resources */,
-				A81152531D81056300819C5F /* ANVideoPlayer_windowClose@3x.png in Resources */,
-				A8224E401D7801430003E66C /* ANVideoPlayer.xib in Resources */,
+				A88B30F31EAF338700284185 /* ANVideoPlayer_cross@2x.png in Resources */,
+				A88B30FB1EAF338700284185 /* ANVideoPlayer_play@3x.png in Resources */,
+				A88B30F81EAF338700284185 /* ANVideoPlayer_pause_big.png in Resources */,
+				A88B30F51EAF338700284185 /* ANVideoPlayer_onLive@3x.png in Resources */,
+				A88B30F11EAF338700284185 /* ANScrubber_thumb@3x.png in Resources */,
+				A88B31031EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png in Resources */,
+				A88B30FF1EAF338700284185 /* ANVideoPlayer_window@3x.png in Resources */,
 				A8241D331D76F38A00EEE384 /* Assets.xcassets in Resources */,
-				A8224E841D7819570003E66C /* ANVideoPlayer_pause@2x.png in Resources */,
-				A86E5E9E1DB0C2F30075846C /* ANVideoPlayer_onLive@2x.png in Resources */,
-				A8224E7C1D7818C50003E66C /* ANVideoPlayer_zoom_in@3x.png in Resources */,
-				A8224E6C1D7816900003E66C /* ANScrubber_thumb@3x.png in Resources */,
-				A81152571D810EBF00819C5F /* ANVideoPlayer_window@2x.png in Resources */,
+				A88B30F41EAF338700284185 /* ANVideoPlayer_onLive@2x.png in Resources */,
+				A88B31011EAF338700284185 /* ANVideoPlayer_windowClose@3x.png in Resources */,
+				A88B31001EAF338700284185 /* ANVideoPlayer_windowClose@2x.png in Resources */,
+				A88B30EA1EAF338700284185 /* ANVideoPlayer.xib in Resources */,
+				A88B30F21EAF338700284185 /* ANVideoPlayer_cross.png in Resources */,
+				A88B31021EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png in Resources */,
+				A88B30F91EAF338700284185 /* ANVideoPlayer_pause_big@2x.png in Resources */,
+				A88B30FE1EAF338700284185 /* ANVideoPlayer_window@2x.png in Resources */,
 				A8241D311D76F38A00EEE384 /* Main.storyboard in Resources */,
-				A8224E6B1D7816900003E66C /* ANScrubber_thumb@2x.png in Resources */,
-				A8224E821D7819570003E66C /* ANVideoPlayer_play@2x.png in Resources */,
-				A8224E791D7818C50003E66C /* ANVideoPlayer_zoom_out@2x.png in Resources */,
-				A8224E561D780BE40003E66C /* ANVideoPlayer_pause_big@2x.png in Resources */,
-				A81152541D81056300819C5F /* ANVideoPlayer_windowClose@2x.png in Resources */,
+				A88B31051EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png in Resources */,
+				A88B31041EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png in Resources */,
+				A88B30FA1EAF338700284185 /* ANVideoPlayer_play@2x.png in Resources */,
+				A88B30F71EAF338700284185 /* ANVideoPlayer_pause@3x.png in Resources */,
 				A8372D961D82AB6500B62487 /* ANPlayerTableViewCell.xib in Resources */,
-				A8224E521D780BE40003E66C /* ANVideoPlayer_cross@2x.png in Resources */,
+				A88B30FC1EAF338700284185 /* ANVideoPlayer_play_big.png in Resources */,
+				A88B30FD1EAF338700284185 /* ANVideoPlayer_play_big@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,17 +517,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8241D661D76F4BF00EEE384 /* ANVideoPlayerLayerView.m in Sources */,
-				A8224E881D781F190003E66C /* UIView+ANFoundation.m in Sources */,
+				A88B30ED1EAF338700284185 /* ANVideoPlayerView.m in Sources */,
+				A88B30EE1EAF338700284185 /* NSObject+ANFoundation.m in Sources */,
 				A8372D8C1D82A7A100B62487 /* ANPlayerViewController.m in Sources */,
 				A8241D2E1D76F38A00EEE384 /* ViewController.m in Sources */,
 				A8372D911D82AACC00B62487 /* ANPlayerModel.m in Sources */,
+				A88B30E91EAF338700284185 /* ANVideoPlayer.m in Sources */,
 				A8372D951D82AB6500B62487 /* ANPlayerTableViewCell.m in Sources */,
-				A8224E321D77CE130003E66C /* ANVideoPlayerView.m in Sources */,
-				A8224E371D77D1F80003E66C /* NSObject+ANFoundation.m in Sources */,
-				A8241D601D76F49200EEE384 /* ANVideoPlayer.m in Sources */,
 				A8241D2B1D76F38A00EEE384 /* AppDelegate.m in Sources */,
-				A81152991D8145DF00819C5F /* ANVideoPlayerUtil.m in Sources */,
+				A88B30EB1EAF338700284185 /* ANVideoPlayerLayerView.m in Sources */,
+				A88B30EC1EAF338700284185 /* ANVideoPlayerUtil.m in Sources */,
+				A88B30EF1EAF338700284185 /* UIView+ANFoundation.m in Sources */,
 				A8241D281D76F38A00EEE384 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
