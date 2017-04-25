@@ -22,7 +22,6 @@
 		A8372D961D82AB6500B62487 /* ANPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8372D941D82AB6500B62487 /* ANPlayerTableViewCell.xib */; };
 		A8372D981D82AE8500B62487 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = A8372D971D82AE8400B62487 /* videoData.json */; };
 		A88B30E91EAF338700284185 /* ANVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30C51EAF338700284185 /* ANVideoPlayer.m */; };
-		A88B30EA1EAF338700284185 /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88B30C61EAF338700284185 /* ANVideoPlayer.xib */; };
 		A88B30EB1EAF338700284185 /* ANVideoPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */; };
 		A88B30EC1EAF338700284185 /* ANVideoPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30CB1EAF338700284185 /* ANVideoPlayerUtil.m */; };
 		A88B30ED1EAF338700284185 /* ANVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A88B30CD1EAF338700284185 /* ANVideoPlayerView.m */; };
@@ -50,6 +49,7 @@
 		A88B31031EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */; };
 		A88B31041EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */; };
 		A88B31051EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */; };
+		A88B31071EAF44BF00284185 /* ANVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = A88B31061EAF44BF00284185 /* ANVideoPlayer.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,6 @@
 		A8372D971D82AE8400B62487 /* videoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videoData.json; sourceTree = "<group>"; };
 		A88B30C41EAF338700284185 /* ANVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayer.h; sourceTree = "<group>"; };
 		A88B30C51EAF338700284185 /* ANVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayer.m; sourceTree = "<group>"; };
-		A88B30C61EAF338700284185 /* ANVideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANVideoPlayer.xib; sourceTree = "<group>"; };
 		A88B30C71EAF338700284185 /* ANVideoPlayerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerConfig.h; sourceTree = "<group>"; };
 		A88B30C81EAF338700284185 /* ANVideoPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANVideoPlayerLayerView.h; sourceTree = "<group>"; };
 		A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANVideoPlayerLayerView.m; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_in@3x.png"; sourceTree = "<group>"; };
 		A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@2x.png"; sourceTree = "<group>"; };
 		A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ANVideoPlayer_zoom_out@3x.png"; sourceTree = "<group>"; };
+		A88B31061EAF44BF00284185 /* ANVideoPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ANVideoPlayer.xib; sourceTree = "<group>"; };
 		C1AA0D0F16D9DAE78E922376 /* libPods-ANVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ANVideoPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,7 +265,6 @@
 			children = (
 				A88B30C41EAF338700284185 /* ANVideoPlayer.h */,
 				A88B30C51EAF338700284185 /* ANVideoPlayer.m */,
-				A88B30C61EAF338700284185 /* ANVideoPlayer.xib */,
 				A88B30C71EAF338700284185 /* ANVideoPlayerConfig.h */,
 				A88B30C81EAF338700284185 /* ANVideoPlayerLayerView.h */,
 				A88B30C91EAF338700284185 /* ANVideoPlayerLayerView.m */,
@@ -306,6 +305,7 @@
 				A88B30E61EAF338700284185 /* ANVideoPlayer_zoom_in@3x.png */,
 				A88B30E71EAF338700284185 /* ANVideoPlayer_zoom_out@2x.png */,
 				A88B30E81EAF338700284185 /* ANVideoPlayer_zoom_out@3x.png */,
+				A88B31061EAF44BF00284185 /* ANVideoPlayer.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -422,6 +422,7 @@
 				A8372D981D82AE8500B62487 /* videoData.json in Resources */,
 				A8241D361D76F38A00EEE384 /* LaunchScreen.storyboard in Resources */,
 				A88B30F31EAF338700284185 /* ANVideoPlayer_cross@2x.png in Resources */,
+				A88B31071EAF44BF00284185 /* ANVideoPlayer.xib in Resources */,
 				A88B30FB1EAF338700284185 /* ANVideoPlayer_play@3x.png in Resources */,
 				A88B30F81EAF338700284185 /* ANVideoPlayer_pause_big.png in Resources */,
 				A88B30F51EAF338700284185 /* ANVideoPlayer_onLive@3x.png in Resources */,
@@ -432,7 +433,6 @@
 				A88B30F41EAF338700284185 /* ANVideoPlayer_onLive@2x.png in Resources */,
 				A88B31011EAF338700284185 /* ANVideoPlayer_windowClose@3x.png in Resources */,
 				A88B31001EAF338700284185 /* ANVideoPlayer_windowClose@2x.png in Resources */,
-				A88B30EA1EAF338700284185 /* ANVideoPlayer.xib in Resources */,
 				A88B30F21EAF338700284185 /* ANVideoPlayer_cross.png in Resources */,
 				A88B31021EAF338700284185 /* ANVideoPlayer_zoom_in@2x.png in Resources */,
 				A88B30F91EAF338700284185 /* ANVideoPlayer_pause_big@2x.png in Resources */,
