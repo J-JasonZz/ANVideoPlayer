@@ -359,6 +359,7 @@
             self.playerView.state = ANVideoPlayerViewStateLandscape;
             break;
         default:
+            rotateToOrientation = UIInterfaceOrientationUnknown;
             break;
     }
     if ((1 << rotateToOrientation) & self.supportedOrientations && rotateToOrientation != self.visibleInterfaceOrientation) {
